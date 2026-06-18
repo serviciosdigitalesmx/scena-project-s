@@ -15,9 +15,16 @@ const fontQuattrocento = Quattrocento_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'SCENA | Ingeniería para Sistemas de Conducción de Fluidos',
+  title: 'SCENA | Ingeniería, suministro y servicio para fluidos industriales',
   description:
-    'Firma mexicana de ingeniería industrial especializada en sistemas de conducción de fluidos para procesos críticos. Soluciones a especificación y alta confiabilidad.',
+    'Ingeniería para sistemas de conducción de fluidos industriales. Mangueras hidráulicas industriales, conexiones, ensambles certificados, pruebas hidrostáticas y suministro industrial B2B.',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? 'https://scena.com.mx'),
+  openGraph: {
+    title: 'SCENA | Ingeniería, suministro y servicio para fluidos industriales',
+    description:
+      'Mangueras hidráulicas industriales, conexiones, ensambles certificados, pruebas hidrostáticas y soluciones para industria crítica.',
+    images: ['/images/scena-logo.jpg'],
+  },
 };
 
 export default function RootLayout({
