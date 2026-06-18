@@ -157,6 +157,16 @@ export default function Home() {
 
   return (
     <main className="bg-background text-text-primary min-h-screen relative overflow-x-hidden selection:bg-primary selection:text-white">
+      <a
+        href={WHATSAPP_URL}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Contactar por WhatsApp"
+        className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 inline-flex items-center gap-3 border border-primary/70 bg-background/95 px-4 py-3 text-xs font-liter uppercase tracking-widest text-white shadow-[0_12px_30px_rgba(0,0,0,0.45)] backdrop-blur-md transition-transform hover:-translate-y-0.5 hover:border-primary"
+      >
+        <span className="h-2.5 w-2.5 bg-primary" />
+        WhatsApp
+      </a>
       
       {/* 0. HEADER / NAVBAR */}
       <header className="sticky top-0 z-50 border-b border-secondary/20 bg-background/90 backdrop-blur-md">
