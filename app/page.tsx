@@ -164,8 +164,14 @@ export default function Home() {
         aria-label="Contactar por WhatsApp"
         className="fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50 inline-flex items-center gap-3 border border-primary/70 bg-background/95 px-4 py-3 text-xs font-liter uppercase tracking-widest text-white shadow-[0_12px_30px_rgba(0,0,0,0.45)] backdrop-blur-md transition-transform hover:-translate-y-0.5 hover:border-primary"
       >
-        <span className="h-2.5 w-2.5 bg-primary" />
-        WhatsApp
+        <img
+          src="/images/whatsapp-button-logo.png"
+          alt=""
+          aria-hidden="true"
+          className="h-7 w-7 object-contain"
+          loading="eager"
+        />
+        <span>WhatsApp</span>
       </a>
       
       {/* 0. HEADER / NAVBAR */}
