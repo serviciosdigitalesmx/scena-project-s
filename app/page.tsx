@@ -5,7 +5,7 @@ import React from 'react';
 
 const WHATSAPP_URL = process.env.NEXT_PUBLIC_WHATSAPP_URL ?? 'https://wa.me/528137157752';
 const WEBSITE_URL = process.env.NEXT_PUBLIC_WEBSITE_URL ?? 'https://www.scena.com.mx';
-const CATALOG_URL = process.env.NEXT_PUBLIC_CATALOG_URL ?? WEBSITE_URL;
+const CATALOG_URL = process.env.NEXT_PUBLIC_CATALOG_URL ?? '/catalogo';
 
 const quickActions = [
   { label: 'Cotización', href: WHATSAPP_URL },
