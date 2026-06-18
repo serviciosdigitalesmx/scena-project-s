@@ -2,6 +2,11 @@
 
 import React, { useState } from 'react';
 
+const WEBSITE_URL = 'https://www.scena.com.mx';
+const EMAIL_URL = 'mailto:ventas@scena.com.mx';
+const PHONE_URL = 'tel:+529334062126';
+const WHATSAPP_URL = 'https://wa.me/528137157752';
+
 // Custom SVG Icons with consistent outline stroke
 const LeakIcon = () => (
   <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -94,6 +99,8 @@ export default function Home() {
     error: '',
   });
 
+  const conversionCta = WHATSAPP_URL;
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
@@ -124,19 +131,28 @@ export default function Home() {
       return;
     }
 
-    // Mock successful submission
-    setTimeout(() => {
-      setFormState({ submitting: false, success: true, error: '' });
-      setFormData({
-        nombre: '',
-        empresa: '',
-        correo: '',
-        telefono: '',
-        sector: '',
-        mensaje: '',
-        aceptaTerminos: false,
-      });
-    }, 1200);
+    const message = [
+      'Hola SCENA, solicito información técnica.',
+      `Nombre: ${formData.nombre}`,
+      `Empresa: ${formData.empresa}`,
+      `Correo: ${formData.correo}`,
+      `Teléfono: ${formData.telefono}`,
+      `Sector: ${formData.sector}`,
+      `Detalle: ${formData.mensaje}`,
+    ].join('\n');
+
+    window.open(`${WHATSAPP_URL}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+
+    setFormState({ submitting: false, success: true, error: '' });
+    setFormData({
+      nombre: '',
+      empresa: '',
+      correo: '',
+      telefono: '',
+      sector: '',
+      mensaje: '',
+      aceptaTerminos: false,
+    });
   };
 
   return (
@@ -146,10 +162,12 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-secondary/20 bg-background/90 backdrop-blur-md">
         <div className="container-custom flex items-center justify-between h-20">
           <div className="flex items-center gap-4">
-            <div className="flex flex-col">
-              <span className="font-liter text-xl font-bold tracking-[6px] text-white">SCENA</span>
-              <span className="label text-[9px] tracking-[2px] mt-0.5">INGENIERÍA DE FLUIDOS</span>
-            </div>
+            <img
+              src="/images/scena-logo.jpg"
+              alt="SCENA"
+              className="h-14 w-auto max-w-[220px] object-contain"
+              loading="eager"
+            />
           </div>
           
           <nav className="hidden md:flex items-center gap-8 text-sm font-liter tracking-widest uppercase text-text-secondary">
@@ -161,7 +179,7 @@ export default function Home() {
             <a href="#contacto" className="hover:text-primary transition-colors">Contacto</a>
           </nav>
 
-          <a href="#contacto" className="btn-outline px-6 py-2.5 text-xs font-semibold">
+          <a href={conversionCta} className="btn-outline px-6 py-2.5 text-xs font-semibold" target="_blank" rel="noreferrer">
             Solicitar Cotización
           </a>
         </div>
@@ -197,11 +215,11 @@ export default function Home() {
               </p>
               
               <div className="flex flex-wrap gap-4 mb-12">
-                <a href="#contacto" className="btn-primary">
+                <a href={conversionCta} className="btn-primary" target="_blank" rel="noreferrer">
                   Solicitar Ingeniería
                 </a>
-                <a href="#contacto" className="btn-outline">
-                  Hablar con Especialista
+                <a href={PHONE_URL} className="btn-outline">
+                  Llamar ahora
                 </a>
               </div>
             </div>
@@ -251,7 +269,7 @@ export default function Home() {
                   Sellado de sistemas con empaques de alta especificación. Diseños espiralados (spiral wound), camprofile y juntas de anillo (ring joint).
                 </p>
               </div>
-              <a href="#contacto" className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
+              <a href={conversionCta} className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
                 Ver más &rarr;
               </a>
             </div>
@@ -268,7 +286,7 @@ export default function Home() {
                   Mangueras metálicas flexibles en aceros inoxidables T304/T316 para absorción dinámica de vibraciones. Conexiones NPT, BSP y bridadas.
                 </p>
               </div>
-              <a href="#contacto" className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
+              <a href={conversionCta} className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
                 Ver más &rarr;
               </a>
             </div>
@@ -285,7 +303,7 @@ export default function Home() {
                   Evitamos la fatiga mecánica mediante la correcta selección de aleaciones y elastómeros según el fluido, temperatura y presión de operación.
                 </p>
               </div>
-              <a href="#contacto" className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
+              <a href={conversionCta} className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
                 Ver más &rarr;
               </a>
             </div>
@@ -302,7 +320,7 @@ export default function Home() {
                   Cálculo e integración de juntas de expansión metálicas, de caucho y PTFE para compensar dilataciones y contracciones axiales y laterales.
                 </p>
               </div>
-              <a href="#contacto" className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
+              <a href={conversionCta} className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
                 Ver más &rarr;
               </a>
             </div>
@@ -319,7 +337,7 @@ export default function Home() {
                   Análisis de compatibilidad de elastómeros, metales y sellantes como Grafoil, PTFE, fibra cerámica y Vitón ante fluidos altamente corrosivos.
                 </p>
               </div>
-              <a href="#contacto" className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
+              <a href={conversionCta} className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
                 Ver más &rarr;
               </a>
             </div>
@@ -336,7 +354,7 @@ export default function Home() {
                   Cumplimiento estricto con las normativas ASME, API e ISO. Trazabilidad completa de materiales y certificación de procesos de soldadura.
                 </p>
               </div>
-              <a href="#contacto" className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
+              <a href={conversionCta} className="text-xs font-liter text-primary hover:text-white transition-colors tracking-widest mt-4 uppercase">
                 Ver más &rarr;
               </a>
             </div>
@@ -366,7 +384,7 @@ export default function Home() {
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
                 Fabricadas en aceros inoxidables T304, T316 y T321. Ideales para soportar temperaturas extremas, alta presión y corrosión agresiva. Conexiones NPT, BSP, bridas y soldadura a tope. Conformes a ASME B31.3.
               </p>
-              <a href="#contacto" className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
+              <a href={conversionCta} className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
                 Ver Especificaciones &rarr;
               </a>
             </div>
@@ -377,7 +395,7 @@ export default function Home() {
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
                 Metálicas, de caucho (hule) y PTFE. Diseñadas para absorber la vibración del sistema, compensar la dilatación térmica lineal y absorber desalineaciones axiales, laterales o angulares en tuberías de planta.
               </p>
-              <a href="#contacto" className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
+              <a href={conversionCta} className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
                 Ver Especificaciones &rarr;
               </a>
             </div>
@@ -388,7 +406,7 @@ export default function Home() {
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
                 Empaques espirometálicos tipo Flexitallic (spiral wound), camprofile, ring joints y láminas prensadas. Fabricados con rellenos de Grafoil, PTFE o metales blandos para sellado hermético en reactores, intercambiadores y válvulas.
               </p>
-              <a href="#contacto" className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
+              <a href={conversionCta} className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
                 Ver Especificaciones &rarr;
               </a>
             </div>
@@ -399,7 +417,7 @@ export default function Home() {
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
                 Líneas hidráulicas de alta presión, mangueras químicas, alimentarias certificadas y mangueras abrasivas. Materiales en PVC, UHMWPE y composites reforzados con alambre de acero. Conformes a normas FDA.
               </p>
-              <a href="#contacto" className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
+              <a href={conversionCta} className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
                 Ver Especificaciones &rarr;
               </a>
             </div>
@@ -410,7 +428,7 @@ export default function Home() {
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
                 Racores de acople rápido, adaptadores camlock, bridas forjadas, válvulas de control y sistemas de soporte para líneas. Disponibles en acero al carbón, inoxidable y aleaciones especiales bajo conformidad API.
               </p>
-              <a href="#contacto" className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
+              <a href={conversionCta} className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
                 Ver Especificaciones &rarr;
               </a>
             </div>
@@ -421,7 +439,7 @@ export default function Home() {
               <p className="text-text-secondary text-sm leading-relaxed mb-4">
                 Levantamiento técnico de piping, diagnóstico metalúrgico y químico de fallas, diseño de soluciones personalizadas de conducción de fluidos, fabricación rápida de repuestos y pruebas hidrostáticas certificadas.
               </p>
-              <a href="#contacto" className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
+              <a href={conversionCta} className="text-xs font-liter text-accent tracking-widest uppercase hover:underline">
                 Ver Especificaciones &rarr;
               </a>
             </div>
@@ -433,7 +451,7 @@ export default function Home() {
               <h4 className="text-subtitle text-white font-bold mb-2">¿No encuentras una solución estándar para tu línea?</h4>
               <p className="text-text-secondary text-sm">Nuestros ingenieros de aplicación realizan diseños mecánicos a la medida de tus condiciones de planta.</p>
             </div>
-            <a href="#contacto" className="btn-primary py-3 px-6 shrink-0">
+            <a href={conversionCta} className="btn-primary py-3 px-6 shrink-0">
               Contactar Ingeniería
             </a>
           </div>
@@ -1080,7 +1098,46 @@ export default function Home() {
 
       <div className="divider-horizontal" />
 
-      {/* 9. FOOTER */}
+      {/* 9. CONTACTO DIRECTO */}
+      <section className="py-20 bg-surface/30">
+        <div className="container-custom">
+          <div className="max-w-2xl mb-10">
+            <span className="label text-primary">CONTACTO DIRECTO</span>
+            <h2 className="text-section text-white mt-2 mb-4">CANALES DE ATENCIÓN</h2>
+            <p className="text-text-secondary text-lg">
+              Accede al canal correcto según tu necesidad. En móvil el orden prioriza WhatsApp, llamada, correo y sitio web.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+            <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="border border-secondary/20 bg-background p-6 hover-premium order-1 md:order-none">
+              <div className="label text-primary mb-3">WhatsApp</div>
+              <div className="text-white text-lg font-liter tracking-wide">81 3715 7752</div>
+              <p className="text-text-secondary text-sm mt-3">Respuesta directa para asesoría técnica y cotizaciones.</p>
+            </a>
+
+            <a href={PHONE_URL} className="border border-secondary/20 bg-background p-6 hover-premium order-2 md:order-none">
+              <div className="label text-primary mb-3">Llamada</div>
+              <div className="text-white text-lg font-liter tracking-wide">933 406 2126</div>
+              <p className="text-text-secondary text-sm mt-3">Comunicación inmediata con el equipo comercial.</p>
+            </a>
+
+            <a href={EMAIL_URL} className="border border-secondary/20 bg-background p-6 hover-premium order-3 md:order-none">
+              <div className="label text-primary mb-3">Correo</div>
+              <div className="text-white text-lg font-liter tracking-wide">ventas@scena.com.mx</div>
+              <p className="text-text-secondary text-sm mt-3">Envío de requerimientos, fichas técnicas y documentación.</p>
+            </a>
+
+            <a href={WEBSITE_URL} target="_blank" rel="noreferrer" className="border border-secondary/20 bg-background p-6 hover-premium order-4 md:order-none">
+              <div className="label text-primary mb-3">Sitio Web</div>
+              <div className="text-white text-lg font-liter tracking-wide">scena.com.mx</div>
+              <p className="text-text-secondary text-sm mt-3">Acceso al portal institucional de SCENA.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* 10. FOOTER */}
       <footer className="py-16 bg-surface">
         <div className="container-custom">
           
@@ -1088,7 +1145,12 @@ export default function Home() {
             
             {/* Column 1: Brand Info */}
             <div className="md:col-span-5">
-              <span className="font-liter text-2xl font-bold tracking-[8px] text-white">SCENA</span>
+              <img
+                src="/images/scena-logo.jpg"
+                alt="SCENA"
+                className="h-16 w-auto max-w-[260px] object-contain"
+                loading="lazy"
+              />
               <p className="text-text-secondary text-sm leading-relaxed mt-4 max-w-sm">
                 Firma mexicana de ingeniería industrial especializada en sistemas de conducción de fluidos para procesos críticos. No vendemos catálogo, diseñamos soluciones confiables.
               </p>
@@ -1102,7 +1164,7 @@ export default function Home() {
                 <li><a href="#soluciones" className="hover:text-primary transition-colors">Componentes de Conducción</a></li>
                 <li><a href="#proceso" className="hover:text-primary transition-colors">Proceso Técnico</a></li>
                 <li><a href="#sectores" className="hover:text-primary transition-colors">Sectores de Aplicación</a></li>
-                <li><a href="#contacto" className="hover:text-primary transition-colors">Contacto Técnico</a></li>
+                <li><a href={conversionCta} className="hover:text-primary transition-colors">Contacto Técnico</a></li>
               </ul>
             </div>
 
@@ -1124,7 +1186,7 @@ export default function Home() {
             <div className="text-xs text-text-secondary font-mono">
               <span>&copy; {new Date().getFullYear()} SCENA. Todos los derechos reservados.</span>
               <span className="mx-3 text-secondary">|</span>
-              <a href="#contacto" className="hover:text-white transition-colors">Política de Privacidad</a>
+              <a href={WEBSITE_URL} target="_blank" rel="noreferrer" className="hover:text-white transition-colors">scena.com.mx</a>
             </div>
 
             {/* Associated Brands row */}
