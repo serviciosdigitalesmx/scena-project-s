@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0A0A0C;
+  --color-surface: #141418;
+  --color-text-primary: #F0EDE8;
+  --color-text-secondary: #8A8580;
+  --color-primary: #C4652A;
+  --color-accent: #D4A853;
+  --color-secondary: #5C5A56;
+  
+  --font-liter: var(--font-liter), monospace;
+  --font-sans: var(--font-quattrocento), sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  --background: #0A0A0C;
+  --surface: #141418;
+  --text-primary: #F0EDE8;
+  --text-secondary: #8A8580;
+  --primary: #C4652A;
+  --accent: #D4A853;
+  --secondary: #5C5A56;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0px !important; /* Forces 0px border-radius globally for strict sharp corners */
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+}
+
+body {
+  margin: 0;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-quattrocento), sans-serif;
+  font-size: 20px; /* Minimum body text is 18px, using 20px for high-end feel */
+  line-height: 1.6;
+}
+
+/* Custom Typography Helpers */
+.text-hero {
+  font-family: var(--font-liter), monospace;
+  font-size: 56px;
+  line-height: 1.1;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.text-section {
+  font-family: var(--font-liter), monospace;
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.text-subtitle {
+  font-family: var(--font-liter), monospace;
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.label {
+  font-family: var(--font-liter), monospace;
+  font-size: 12px;
+  line-height: 1.0;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.kpi {
+  font-family: var(--font-liter), monospace;
+  font-size: 64px;
+  line-height: 1.0;
+  letter-spacing: 2px;
+  color: var(--primary);
+}
+
+/* Utility Layouts */
+.container-custom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.divider-horizontal {
+  height: 1px;
+  background-color: var(--secondary);
+  opacity: 0.3;
+  width: 100%;
+}
+
+.divider-vertical-accent {
+  width: 3px;
+  background-color: var(--primary);
+  align-self: stretch;
+}
+
+/* Subtle micro-animations for interactive premium items */
+.hover-premium {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.hover-premium:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Button variants */
+.btn-primary {
+  background-color: var(--primary);
+  color: #FFFFFF;
+  padding: 16px 32px;
+  font-family: var(--font-liter), monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: var(--primary);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  padding: 16px 32px;
+  font-family: var(--font-liter), monospace;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+/* Selection and scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+::selection {
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
