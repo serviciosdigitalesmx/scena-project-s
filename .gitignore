@@ -1,0 +1,10 @@
+.next/
+.scena-runtime/
+.tmp_pdf_imgs/
+node_modules/
+tsconfig.tsbuildinfo
+.DS_Store
+*.log
+
+# The Medusa starter is maintained as its own Git repository.
+scena-b2b-catalog/
