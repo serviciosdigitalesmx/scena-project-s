@@ -44,9 +44,9 @@ export function Solutions() {
                     <a href={quoteUrl(category.label)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-safety-red px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-safety-red focus-visible:ring-offset-2" aria-label={`Agregar ${category.label} a una cotización por WhatsApp`}>
                       Agregar a cotización
                     </a>
-                    <button type="button" onClick={() => setSelectedCategoryId(category.id)} aria-expanded={isSelected} aria-controls="catalogo" className="inline-flex items-center justify-center gap-2 border border-navy/20 px-4 py-3 text-sm font-bold text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fluid-copper focus-visible:ring-offset-2">
+                    <a href="#catalogo" onClick={() => setSelectedCategoryId(category.id)} aria-current={isSelected ? 'location' : undefined} className="inline-flex items-center justify-center gap-2 border border-navy/20 px-4 py-3 text-sm font-bold text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fluid-copper focus-visible:ring-offset-2">
                       Ver ficha <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               </article>
@@ -54,7 +54,7 @@ export function Solutions() {
           })}
         </div>
 
-        <div id="catalogo" className="mt-16 scroll-mt-28 border border-navy/10 bg-navy p-6 text-white md:p-10">
+        <div id="catalogo" aria-live="polite" className="mt-16 scroll-mt-28 border border-navy/10 bg-navy p-6 text-white md:p-10">
           <div className="flex flex-col justify-between gap-5 border-b border-white/10 pb-7 md:flex-row md:items-end">
             <div>
               <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-fluid-copper">Catálogo técnico</span>
