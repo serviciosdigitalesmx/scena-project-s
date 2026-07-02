@@ -2,112 +2,111 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
-import { ChevronDown, MessageCircle } from 'lucide-react'
+import { ArrowRight, Check, MessageCircle } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'
 import { Button } from '@/components/ui/Button'
-import { ContactActions } from '@/components/ui/ContactActions'
 import { CATALOG_CATEGORIES } from '@/lib/catalog'
 import { SITE } from '@/lib/constants'
 import { cn } from '@/lib/utils'
 
 export function Solutions() {
-  const [openCategory, setOpenCategory] = useState('metalica')
-  const [openProduct, setOpenProduct] = useState<string | null>('MM-001')
+  const [selectedCategoryId, setSelectedCategoryId] = useState('hidraulica')
+  const selectedCategory = CATALOG_CATEGORIES.find((category) => category.id === selectedCategoryId) ?? CATALOG_CATEGORIES[0]
 
-  const getWhatsappUrl = (productCode: string, productName: string) => {
-    const message = `Hola, necesito cotización para el producto ${productCode} - ${productName}. ${SITE.whatsapp.message}`
-    return `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(message)}`
-  }
+  const quoteUrl = (subject: string) => `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(`Hola SCENA, quiero agregar ${subject} a una cotización. Mi aplicación es:`)}`
 
   return (
-    <Section id="soluciones" dark className="relative overflow-hidden bg-[#0d1b2b]">
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-fluid-copper/60 to-transparent" />
+    <Section id="soluciones" className="bg-[#F2F3F5]">
       <Container>
-        <div className="max-w-3xl mb-10">
-          <span className="section-kicker">Catálogo técnico</span>
-          <Heading level={2} className="mt-4 text-white section-title">
-            No buscamos en un catálogo.
-            <br />
-            <span className="text-fluid-copper">Seleccionamos por especificación.</span>
-          </Heading>
-          <p className="body-text mt-5 max-w-2xl text-gray-300">
-            Aquí sí ves qué vendemos. Fotos reales del catálogo, códigos visibles, specs técnicas y un camino directo a WhatsApp.
-          </p>
+        <div className="grid gap-7 lg:grid-cols-[1fr_0.62fr] lg:items-end">
+          <div>
+            <span className="section-kicker">Familias de productos</span>
+            <Heading level={2} className="mt-4 max-w-3xl text-navy">La pieza correcta empieza por la aplicación correcta</Heading>
+          </div>
+          <p className="text-lg leading-8 text-gray-700">Fotos reales, familias claras y cotización sin precios ficticios. Selecciona una categoría para revisar su ficha técnica.</p>
         </div>
 
-        <div className="space-y-4">
-          {CATALOG_CATEGORIES.map((category) => (
-            <div key={category.id} id={category.id} className="scroll-mt-28 overflow-hidden border border-white/10 bg-navy-light">
-              <button
-                className="grid w-full grid-cols-[112px_1fr] text-left transition-colors hover:bg-white/[0.025] md:grid-cols-[220px_1fr]"
-                onClick={() => setOpenCategory(openCategory === category.id ? '' : category.id)}
-                aria-expanded={openCategory === category.id}
-                aria-controls={`categoria-${category.id}`}
-              >
-                <Image src={category.image} alt={category.imageAlt} width={category.width} height={category.height} loading="lazy" sizes="(max-width: 768px) 112px, 220px" className="h-full min-h-28 w-full border-r border-white/10 object-cover md:min-h-36" />
-                <div className="flex items-center justify-between gap-4 p-5 md:p-7">
-                  <div>
-                    <div className="text-xl font-semibold text-white md:text-2xl">{category.label}</div>
-                    <div className="mt-2 text-xs leading-5 text-gray-text md:text-sm">{category.summary}</div>
-                  </div>
-                  <ChevronDown className={cn('h-5 w-5 shrink-0 text-fluid-copper transition-transform duration-300', openCategory === category.id ? 'rotate-180' : '')} />
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {CATALOG_CATEGORIES.map((category) => {
+            const isSelected = selectedCategory.id === category.id
+            return (
+              <article key={category.id} className={cn('group overflow-hidden border bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_22px_55px_rgba(10,22,40,0.12)]', isSelected ? 'border-fluid-copper shadow-[0_16px_45px_rgba(10,22,40,0.1)]' : 'border-navy/10')}>
+                <div className="relative overflow-hidden bg-white">
+                  <Image src={category.image} alt={category.imageAlt} width={category.width} height={category.height} loading="lazy" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]" />
+                  <div className="absolute left-4 top-4 bg-navy px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white">{category.products.length} {category.products.length === 1 ? 'solución' : 'soluciones'}</div>
                 </div>
-              </button>
-
-              {openCategory === category.id ? (
-                <div id={`categoria-${category.id}`} className="border-t border-white/10 p-4 md:p-6">
-                  <div className="space-y-4">
-                      {category.products.map((product) => (
-                        <article key={product.code} id={`producto-${product.code.toLowerCase()}`} className="scroll-mt-28 overflow-hidden border border-white/10 bg-navy">
-                          <button className="grid w-full text-left transition-colors hover:bg-white/[0.03] sm:grid-cols-[180px_1fr]" onClick={() => setOpenProduct(openProduct === product.code ? null : product.code)} aria-expanded={openProduct === product.code} aria-controls={`detalle-${product.code.toLowerCase()}`}>
-                            <Image src={product.image} alt={product.imageAlt} width={product.width} height={product.height} loading="lazy" sizes="(max-width: 640px) 100vw, 180px" className="h-48 w-full border-b border-white/10 object-cover sm:h-full sm:min-h-52 sm:border-b-0 sm:border-r" />
-                            <div className="p-5 md:p-6">
-                              <div className="flex items-start justify-between gap-4">
-                                <div>
-                                  <span className="font-mono text-xs text-fluid-copper">{product.code}</span>
-                                  <h3 className="mt-2 text-xl font-semibold text-white">{product.name}</h3>
-                                </div>
-                                <ChevronDown className={cn('h-5 w-5 shrink-0 text-gray-text transition-transform duration-300', openProduct === product.code ? 'rotate-180' : '')} aria-hidden="true" />
-                              </div>
-                              <p className="mt-3 text-sm leading-6 text-gray-300">{product.description}</p>
-                              <dl className="mt-5 grid gap-3 text-xs sm:grid-cols-3">
-                                <div><dt className="font-mono uppercase tracking-wider text-gray-text">Materiales</dt><dd className="mt-1 leading-5 text-white">{product.materials}</dd></div>
-                                <div><dt className="font-mono uppercase tracking-wider text-gray-text">Presión</dt><dd className="mt-1 leading-5 text-white">{product.pressure}</dd></div>
-                                <div><dt className="font-mono uppercase tracking-wider text-gray-text">Temperatura</dt><dd className="mt-1 leading-5 text-white">{product.temperature}</dd></div>
-                              </dl>
-                            </div>
-                          </button>
-
-                          {openProduct === product.code ? (
-                            <div id={`detalle-${product.code.toLowerCase()}`} className="border-t border-white/10 p-5 md:p-7">
-                              <div className="grid gap-7 lg:grid-cols-2">
-                                <div>
-                                  <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-fluid-copper">Aplicaciones típicas</div>
-                                  <ul className="mt-3 grid gap-2 text-sm text-gray-200 sm:grid-cols-2">
-                                    {product.applications.map((application) => <li key={application} className="border-l border-fluid-copper pl-3">{application}</li>)}
-                                  </ul>
-                                </div>
-                                <div>
-                                  <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-fluid-copper">Especificaciones</div>
-                                  <ul className="mt-3 space-y-2 text-sm text-gray-300">
-                                    {product.specifications.map((specification) => <li key={specification}>• {specification}</li>)}
-                                  </ul>
-                                </div>
-                              </div>
-                              <Button href={getWhatsappUrl(product.code, product.name)} icon={<MessageCircle className="h-4 w-4" />} size="lg" className="mt-7 w-full md:w-auto" ariaLabel={`Validar aplicación del producto ${product.code} por WhatsApp`}>Validar aplicación</Button>
-                            </div>
-                          ) : null}
-                        </article>
-                      ))}
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-navy">{category.label}</h3>
+                  <p className="mt-3 min-h-14 text-base leading-7 text-gray-700">{category.summary}</p>
+                  <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                    <a href={quoteUrl(category.label)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#E83B2F] px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-[#C92E24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-safety-red focus-visible:ring-offset-2" aria-label={`Agregar ${category.label} a una cotización por WhatsApp`}>
+                      Agregar a cotización
+                    </a>
+                    <button type="button" onClick={() => setSelectedCategoryId(category.id)} aria-expanded={isSelected} aria-controls="catalogo" className="inline-flex items-center justify-center gap-2 border border-navy/20 px-4 py-3 text-sm font-bold text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fluid-copper focus-visible:ring-offset-2">
+                      Ver ficha <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                    </button>
                   </div>
                 </div>
-              ) : null}
+              </article>
+            )
+          })}
+        </div>
+
+        <div id="catalogo" className="mt-16 scroll-mt-28 border border-navy/10 bg-navy p-6 text-white md:p-10">
+          <div className="flex flex-col justify-between gap-5 border-b border-white/10 pb-7 md:flex-row md:items-end">
+            <div>
+              <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-fluid-copper">Catálogo técnico seleccionado</span>
+              <h3 className="mt-3 text-3xl font-bold md:text-4xl">{selectedCategory.label}</h3>
             </div>
-          ))}
+            <p className="max-w-xl text-base leading-7 text-gray-300">{selectedCategory.summary} Revisa los rangos de referencia; ingeniería confirma la selección final según tu operación.</p>
+          </div>
+
+          <div className="mt-8 grid gap-6 lg:grid-cols-2">
+            {selectedCategory.products.map((product) => (
+              <article key={product.code} className="overflow-hidden border border-white/10 bg-white/[0.035]">
+                <div className="grid sm:grid-cols-[160px_1fr]">
+                  <Image src={product.image} alt={product.imageAlt} width={product.width} height={product.height} loading="lazy" sizes="(max-width: 640px) 100vw, 160px" className="h-52 w-full object-cover sm:h-full" />
+                  <div className="p-6">
+                    <span className="font-mono text-xs text-fluid-copper">{product.code}</span>
+                    <h4 className="mt-2 text-xl font-bold text-white">{product.name}</h4>
+                    <p className="mt-3 text-sm leading-6 text-gray-300">{product.description}</p>
+                  </div>
+                </div>
+                <dl className="grid border-t border-white/10 sm:grid-cols-3">
+                  {[
+                    ['Materiales', product.materials],
+                    ['Presión', product.pressure],
+                    ['Temperatura', product.temperature],
+                  ].map(([label, value]) => (
+                    <div key={label} className="border-b border-white/10 p-4 last:border-b-0 sm:border-b-0 sm:border-r sm:last:border-r-0">
+                      <dt className="font-mono text-[9px] uppercase tracking-[0.18em] text-gray-text">{label}</dt>
+                      <dd className="mt-2 text-xs leading-5 text-white">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <div className="border-t border-white/10 p-6">
+                  <div className="grid gap-6 sm:grid-cols-2">
+                    <div>
+                      <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-gray-text">Aplicaciones</div>
+                      <ul className="mt-3 grid gap-2 text-sm text-gray-300">
+                        {product.applications.slice(0, 4).map((application) => <li key={application} className="flex items-center gap-2"><Check className="h-4 w-4 text-fluid-copper" />{application}</li>)}
+                      </ul>
+                    </div>
+                    <div>
+                      <div className="font-mono text-[9px] uppercase tracking-[0.18em] text-gray-text">Especificaciones</div>
+                      <ul className="mt-3 grid gap-2 text-sm text-gray-300">
+                        {product.specifications.map((specification) => <li key={specification} className="flex items-start gap-2"><span className="mt-2 h-1 w-1 shrink-0 bg-fluid-copper" />{specification}</li>)}
+                      </ul>
+                    </div>
+                  </div>
+                  <Button href={quoteUrl(`${product.code} - ${product.name}`)} icon={<MessageCircle className="h-4 w-4" />} className="mt-6 w-full sm:w-auto" ariaLabel={`Validar aplicación del producto ${product.code} por WhatsApp`}>Validar aplicación</Button>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
-        <ContactActions message="Hola SCENA, quiero validar cuál producto del catálogo corresponde a mi aplicación." />
       </Container>
     </Section>
   )

@@ -1,27 +1,39 @@
-import { MessageCircle, Phone, Mail } from 'lucide-react'
+import { Mail, MessageCircle, Phone, ShieldCheck } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'
 import { Button } from '@/components/ui/Button'
+import { RequirementForm } from '@/components/ui/RequirementForm'
 import { SITE } from '@/lib/constants'
 
 export function Contact() {
   const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(SITE.whatsapp.message)}`
+
   return (
-    <Section id="contacto" dark className="bg-navy relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-accent-blue/5 blur-3xl" />
-      <Container className="relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs uppercase tracking-widest text-gray-text font-mono">Contacto técnico</span>
-          <Heading level={2} className="mt-3 text-white">Habla con alguien que entiende tu planta</Heading>
-          <p className="text-base md:text-lg text-gray-text leading-relaxed mt-4 max-w-2xl mx-auto">Sin esperas, sin call centers. Comunicación directa con ingeniería de aplicación.</p>
+    <Section id="contacto" dark className="relative overflow-hidden bg-[#081422]">
+      <div className="industrial-grid absolute inset-0 opacity-30" />
+      <div className="absolute -right-24 top-0 h-96 w-96 rounded-full bg-fluid-copper/10 blur-3xl" />
+      <Container className="relative">
+        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
+          <div>
+            <span className="section-kicker">Cotización técnica 24/7</span>
+            <Heading level={2} className="mt-4 text-white">Envía el problema. Ingeniería define el siguiente paso.</Heading>
+            <p className="mt-6 text-lg leading-8 text-gray-300">Comparte foto, medida, aplicación o ficha técnica. Te ayudamos a ordenar los datos críticos antes de seleccionar.</p>
+
+            <div className="mt-8 border-l-2 border-fluid-copper pl-5">
+              <div className="flex items-center gap-3 text-white"><ShieldCheck className="h-5 w-5 text-fluid-copper" /><strong>Más de 30 años de experiencia industrial</strong></div>
+              <p className="mt-2 text-sm leading-6 text-gray-400">Atención directa para requerimientos planeados y urgencias de operación.</p>
+            </div>
+
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+              <Button href={whatsappUrl} icon={<MessageCircle className="h-5 w-5" />} className="w-full sm:w-auto" ariaLabel="Abrir WhatsApp de SCENA">WhatsApp directo</Button>
+              <Button variant="ghost" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="h-5 w-5" />} className="w-full sm:w-auto" ariaLabel={`Llamar a SCENA al ${SITE.phone.primary}`}>{SITE.phone.primary}</Button>
+            </div>
+            <a href={`mailto:${SITE.email}`} className="mt-5 inline-flex items-center gap-2 text-sm text-gray-300 transition-colors hover:text-white"><Mail className="h-4 w-4 text-fluid-copper" />{SITE.email}</a>
+          </div>
+
+          <RequirementForm />
         </div>
-        <div className="mx-auto flex max-w-3xl flex-col items-center justify-center gap-4 md:flex-row">
-          <Button href={whatsappUrl} icon={<MessageCircle className="w-5 h-5" />} size="lg" className="w-full md:w-auto min-w-[200px]" ariaLabel="Solicitar cotización por WhatsApp">WhatsApp</Button>
-          <Button variant="secondary" size="lg" href={`tel:${SITE.phone.primary}`} icon={<Phone className="w-5 h-5" />} className="w-full md:w-auto min-w-[200px]" ariaLabel={`Llamar a SCENA al ${SITE.phone.primary}`}>{SITE.phone.primary}</Button>
-          <Button variant="ghost" size="lg" href={`mailto:${SITE.email}`} icon={<Mail className="w-5 h-5" />} className="w-full md:w-auto min-w-[200px]" ariaLabel="Enviar correo a SCENA">Correo</Button>
-        </div>
-        <p className="mt-6 text-center text-sm text-gray-text">Línea alterna: <a href={`tel:${SITE.phone.secondary}`} className="text-white underline decoration-fluid-copper underline-offset-4">{SITE.phone.secondary}</a> · <a href={`mailto:${SITE.email}`} className="text-white underline decoration-fluid-copper underline-offset-4">{SITE.email}</a></p>
       </Container>
     </Section>
   )

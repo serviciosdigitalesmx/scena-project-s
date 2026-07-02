@@ -32,8 +32,8 @@ export function Header() {
             ))}
           </ul>
           <div className="flex items-center gap-3 pl-6 border-l border-white/10">
-            <Button variant="ghost" size="sm" href={`tel:${SITE.phone.primary}`} icon={<Phone className="w-4 h-4" />} ariaLabel="Llamar a SCENA">Llamar</Button>
-            <Button size="sm" href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} ariaLabel="Solicitar cotización por WhatsApp">Cotizar</Button>
+            <Button variant="ghost" size="sm" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="w-4 h-4" />} ariaLabel="Llamar a SCENA">{SITE.phone.primary}</Button>
+            <Button size="sm" href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} ariaLabel="Solicitar cotización urgente por WhatsApp">Urgencia 24/7</Button>
           </div>
         </nav>
         <button className="-mr-2 p-2 text-white lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={isMenuOpen}>
@@ -41,7 +41,7 @@ export function Header() {
         </button>
       </div>
       {isMenuOpen ? (
-        <div className="fixed inset-x-0 top-20 overflow-hidden border-t border-white/10 bg-navy lg:hidden md:top-24">
+        <div className="fixed inset-x-0 top-20 max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-white/10 bg-navy lg:hidden md:top-24 md:max-h-[calc(100vh-6rem)]">
             <div className="max-w-7xl mx-auto px-6 md:px-12 py-8 space-y-6">
               <ul className="space-y-4">
                 {NAVIGATION.categories.map((cat) => (
@@ -53,8 +53,8 @@ export function Header() {
                 ))}
               </ul>
               <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
-                <Button variant="ghost" href={`tel:${SITE.phone.primary}`} icon={<Phone className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Llamar ahora</Button>
-                <Button href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Solicitar cotización</Button>
+                <Button variant="ghost" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Llamar ahora</Button>
+                <Button href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Urgencia 24/7</Button>
               </div>
             </div>
         </div>

@@ -28,7 +28,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'metalica',
     label: 'Metálica',
-    summary: 'Acero inoxidable para temperatura, vibración y movimiento',
+    summary: 'Absorbe movimiento y temperatura sin comprometer la línea.',
     image: '/catalog/manguera-metalica.webp',
     imageAlt: 'Mangueras flexibles de acero inoxidable con malla trenzada',
     width: 800,
@@ -67,7 +67,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'hidraulica',
     label: 'Hidráulica',
-    summary: 'Potencia fluida y conexiones para presión dinámica',
+    summary: 'Mantén la potencia hidráulica donde la presión no perdona.',
     image: '/catalog/manguera-hidraulica.webp',
     imageAlt: 'Mangueras hidráulicas industriales con terminales prensadas',
     width: 1600,
@@ -106,7 +106,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'industrial',
     label: 'Industrial',
-    summary: 'Succión, descarga y transferencia de fluidos',
+    summary: 'Transfiere agua, aceites y lodos con el refuerzo correcto.',
     image: '/catalog/manguera-industrial.webp',
     imageAlt: 'Familias de mangueras industriales para transferencia de fluidos',
     width: 850,
@@ -131,7 +131,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'contra-incendio',
     label: 'Contra incendio',
-    summary: 'Mangueras y accesorios para respuesta de emergencia',
+    summary: 'Respuesta confiable para gabinetes y brigadas industriales.',
     image: '/catalog/manguera-contra-incendio.webp',
     imageAlt: 'Mangueras y accesorios para sistemas contra incendio',
     width: 800,
@@ -156,7 +156,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'pvc',
     label: 'PVC',
-    summary: 'Soluciones ligeras para agua, aire y servicios generales',
+    summary: 'Flexibilidad y visibilidad para servicios de agua y aire.',
     image: '/catalog/manguera-pvc.webp',
     imageAlt: 'Mangueras de PVC reforzado para aplicaciones industriales',
     width: 800,
@@ -181,7 +181,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'neumatica',
     label: 'Neumática',
-    summary: 'Aire comprimido, automatización y control',
+    summary: 'Conecta actuadores y herramientas con recorridos limpios.',
     image: '/catalog/manguera-neumatica.webp',
     imageAlt: 'Mangueras neumáticas para aire comprimido y automatización',
     width: 704,
@@ -206,7 +206,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'conexiones',
     label: 'Conexiones',
-    summary: 'Uniones hidráulicas y rápidas para montaje seguro',
+    summary: 'Resuelve transiciones y desmontajes con el sello adecuado.',
     image: '/catalog/conexiones-hidraulicas.webp',
     imageAlt: 'Conexiones hidráulicas industriales de acero',
     width: 697,

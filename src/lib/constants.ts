@@ -1,7 +1,7 @@
 export const SITE = {
-  name: 'SCENA 30 Años',
+  name: 'SCENA',
   tagline: 'Suministros y Conexiones',
-  description: 'Mangueras, conexiones y soluciones para conducción de fluidos. Selección por presión, temperatura y aplicación con atención técnica en México.',
+  description: 'Soluciones 24/7 en mangueras y conexiones industriales con levantamiento técnico, cotización y cobertura nacional para minería, petroquímica y maquinaria pesada.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://scena.com.mx',
   phone: {
     primary: '933 132 1193',
@@ -10,18 +10,18 @@ export const SITE = {
   email: 'albertodelacruz@scena.com.mx',
   whatsapp: {
     number: '529331321193',
-    message: 'Hola, necesito cotización para una aplicación industrial:',
+    message: 'Hola SCENA, tengo un requerimiento industrial urgente y necesito apoyo técnico 24/7:',
   },
-  address: 'Servicios y Conexiones Cena, México',
+  coverage: 'Cobertura nacional en México',
+  hours: 'Atención de requerimientos 24/7',
 }
 
 export const NAVIGATION = {
   categories: [
-    { id: 'soluciones', label: 'Soluciones' },
+    { id: 'soluciones', label: 'Categorías' },
     { id: 'industrias', label: 'Industrias' },
+    { id: 'catalogo', label: 'Catálogo' },
     { id: 'casos', label: 'Casos' },
-    { id: 'proceso', label: 'Proceso' },
-    { id: 'faq', label: 'FAQ' },
     { id: 'contacto', label: 'Contacto' },
   ],
 }
@@ -33,21 +33,70 @@ export const DIAGNOSTICS = [
 ] as const
 
 export const INDUSTRIES = [
-  { id: 'mineria', label: 'Minería', icon: 'Mountain', description: 'Componentes para abrasión, presión y operación continua.', applications: ['Lodos', 'Hidráulica móvil', 'Agua de proceso'] },
-  { id: 'petroleo', label: 'Petróleo y derivados', icon: 'Fuel', description: 'Transferencia segura con compatibilidad química validada.', applications: ['Carga y descarga', 'Aceites', 'Combustibles'] },
-  { id: 'agricola', label: 'Agrícola', icon: 'Sprout', description: 'Conducción flexible para campo, riego y maquinaria.', applications: ['Riego', 'Fertilizantes', 'Equipo hidráulico'] },
-  { id: 'alimentos', label: 'Alimentos', icon: 'Factory', description: 'Materiales resistentes a corrosión y ciclos de limpieza.', applications: ['Agua', 'Vapor', 'Procesos sanitarios'] },
-  { id: 'quimicos', label: 'Químicos', icon: 'FlaskConical', description: 'Selección por fluido, concentración y temperatura.', applications: ['Ácidos', 'Solventes', 'Dosificación'] },
-  { id: 'general', label: 'Industria general', icon: 'Settings', description: 'Soluciones para mantenimiento y servicios de planta.', applications: ['Aire', 'Agua', 'Vapor y automatización'] },
+  {
+    id: 'mineria',
+    label: 'Minería',
+    description: 'Mangueras para perforación, cargadores y camiones de acarreo, seleccionadas para abrasión, impulso y alta presión.',
+    applications: ['Hidráulica móvil', 'Lodos', 'Agua de proceso'],
+    image: '/catalog/manguera-hidraulica.webp',
+    imageAlt: 'Mangueras hidráulicas para maquinaria minera y equipos móviles',
+    width: 1600,
+    height: 900,
+  },
+  {
+    id: 'petroquimica',
+    label: 'Petroquímica',
+    description: 'Compatibilidad de materiales para hidrocarburos, vapor y químicos agresivos con presión y temperatura validadas.',
+    applications: ['Hidrocarburos', 'Vapor', 'Carga y descarga'],
+    image: '/catalog/manguera-metalica.webp',
+    imageAlt: 'Manguera metálica inoxidable para aplicaciones petroquímicas',
+    width: 800,
+    height: 800,
+  },
+  {
+    id: 'maquinaria',
+    label: 'Maquinaria pesada',
+    description: 'Ensambles y adaptadores para circuitos sometidos a vibración, movimiento continuo y picos de presión.',
+    applications: ['Prensas', 'Cilindros', 'Equipo de construcción'],
+    image: '/catalog/adaptadores-hidraulicos.webp',
+    imageAlt: 'Adaptadores y conexiones para maquinaria pesada industrial',
+    width: 1000,
+    height: 1000,
+  },
+  {
+    id: 'alimentos',
+    label: 'Alimentos y proceso',
+    description: 'Componentes inoxidables y conexiones desmontables para fluidos de proceso, vapor y ciclos frecuentes de limpieza.',
+    applications: ['Agua', 'Vapor', 'Líneas de proceso'],
+    image: '/catalog/tuberia-inoxidable.webp',
+    imageAlt: 'Componentes inoxidables para industria de alimentos y procesos',
+    width: 996,
+    height: 996,
+  },
 ] as const
 
-export const TRUST_POINTS = [
-  { icon: 'CalendarCheck', title: 'Más de 30 años', description: 'Experiencia acumulada en conducción de fluidos y mantenimiento industrial.' },
-  { icon: 'HardHat', title: 'Atención por ingenieros', description: 'La selección parte de tu aplicación, no de una lista genérica.' },
-  { icon: 'BadgeCheck', title: 'Validación técnica', description: 'Revisamos fluido, presión, temperatura, conexión y movimiento.' },
-  { icon: 'Map', title: 'Cobertura nacional', description: 'Coordinamos cotizaciones y entregas para proyectos en México.' },
-  { icon: 'Timer', title: 'Respuesta rápida', description: 'Priorizamos especificaciones completas y necesidades urgentes de planta.' },
-  { icon: 'ShieldCheck', title: 'Materiales certificados', description: 'Especificamos normas y materiales trazables cuando la aplicación lo requiere.' },
+export const SERVICES = [
+  {
+    icon: 'ScanSearch',
+    title: 'Levantamiento técnico en sitio',
+    result: 'Identificamos la solución correcta antes de que tu línea permanezca detenida más tiempo.',
+    cta: 'Agendar visita',
+    message: 'Hola SCENA, necesito agendar un levantamiento técnico en sitio.',
+  },
+  {
+    icon: 'DraftingCompass',
+    title: 'Ingeniería de aplicación',
+    result: 'Cruzamos fluido, presión, temperatura, movimiento y conexión para reducir el riesgo de una selección incorrecta.',
+    cta: 'Enviar especificaciones',
+    message: 'Hola SCENA, quiero enviar las especificaciones de una aplicación industrial.',
+  },
+  {
+    icon: 'ClipboardCheck',
+    title: 'Pruebas y documentación',
+    result: 'Definimos las pruebas y la documentación técnica que requiere cada ensamble antes de instalarlo.',
+    cta: 'Solicitar documentación',
+    message: 'Hola SCENA, necesito revisar pruebas y documentación para un ensamble industrial.',
+  },
 ] as const
 
 export const PROCESS_STEPS = [

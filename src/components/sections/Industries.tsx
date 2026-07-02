@@ -1,40 +1,42 @@
-import { Factory, FlaskConical, Fuel, Mountain, Settings, Sprout } from 'lucide-react'
+import Image from 'next/image'
+import { ArrowUpRight } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'
-import { ContactActions } from '@/components/ui/ContactActions'
 import { INDUSTRIES, SITE } from '@/lib/constants'
-
-const iconMap = { Factory, FlaskConical, Fuel, Mountain, Settings, Sprout }
 
 export function Industries() {
   return (
-    <Section id="industrias" dark className="bg-navy">
+    <Section id="industrias" className="bg-white">
       <Container>
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-xs uppercase tracking-widest text-gray-text font-mono">Aplicaciones</span>
-          <Heading level={2} className="mt-3 text-white">Donde la falla no es una opción</Heading>
-          <p className="text-base md:text-lg text-gray-text leading-relaxed mt-4 max-w-2xl mx-auto">SCENA opera en entornos críticos. Conocemos las exigencias de cada industria.</p>
+        <div className="max-w-3xl">
+          <span className="section-kicker">Industrias críticas</span>
+          <Heading level={2} className="mt-4 text-navy">Cada sector falla distinto. La solución también.</Heading>
+          <p className="mt-5 text-lg leading-8 text-gray-700">Cuatro entornos donde la compatibilidad, la presión y el tiempo de respuesta cambian por completo la especificación.</p>
         </div>
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+
+        <div className="mt-12 grid gap-6 lg:grid-cols-2">
           {INDUSTRIES.map((industry) => {
-            const Icon = iconMap[industry.icon]
-            const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(`Hola SCENA, quiero consultar una aplicación para la industria ${industry.label}.`)}`
+            const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(`Hola SCENA, necesito resolver una aplicación para ${industry.label}.`)}`
             return (
-              <article key={industry.id} className="group border border-white/10 bg-white/[0.025] p-7 transition-colors hover:border-fluid-copper/50">
-                <Icon className="h-7 w-7 text-fluid-copper" aria-hidden="true" />
-                <h3 className="mt-5 text-xl font-semibold text-white">{industry.label}</h3>
-                <p className="mt-3 text-sm leading-6 text-gray-text">{industry.description}</p>
-                <div className="mt-5 font-mono text-[10px] uppercase tracking-[0.2em] text-gray-text">Aplicaciones típicas</div>
-                <ul className="mt-3 flex flex-wrap gap-2">
-                  {industry.applications.map((application) => <li key={application} className="border border-white/10 px-2.5 py-1 text-xs text-gray-300">{application}</li>)}
-                </ul>
-                <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex text-sm font-semibold text-white underline decoration-fluid-copper underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fluid-copper" aria-label={`Consultar una aplicación de ${industry.label} con ingeniería`}>Consultar con ingeniería</a>
+              <article key={industry.id} className="group grid overflow-hidden border border-navy/10 bg-[#F4F5F6] sm:grid-cols-[0.86fr_1.14fr]">
+                <div className="overflow-hidden bg-white">
+                  <Image src={industry.image} alt={industry.imageAlt} width={industry.width} height={industry.height} loading="lazy" sizes="(max-width: 640px) 100vw, 42vw" className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.035] sm:h-full" />
+                </div>
+                <div className="flex flex-col p-7 md:p-8">
+                  <h3 className="text-2xl font-extrabold text-navy">{industry.label}</h3>
+                  <p className="mt-4 text-base leading-7 text-gray-700">{industry.description}</p>
+                  <ul className="mt-5 flex flex-wrap gap-2">
+                    {industry.applications.map((application) => <li key={application} className="border border-navy/15 bg-white px-3 py-1.5 text-xs font-semibold text-navy">{application}</li>)}
+                  </ul>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex items-center gap-2 self-start text-sm font-bold text-navy underline decoration-fluid-copper decoration-2 underline-offset-4 transition-colors hover:text-fluid-copper" aria-label={`Consultar una aplicación de ${industry.label} con ingeniería`}>
+                    Consultar aplicación <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                </div>
               </article>
             )
           })}
         </div>
-        <ContactActions message="Hola SCENA, quiero consultar una aplicación industrial con su equipo de ingeniería." />
       </Container>
     </Section>
   )
