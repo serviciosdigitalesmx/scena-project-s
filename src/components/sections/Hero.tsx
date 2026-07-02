@@ -15,13 +15,13 @@ export function Hero() {
 
   return (
     <section className="relative isolate overflow-hidden bg-navy pb-20 pt-32 md:pb-28 md:pt-40 lg:min-h-[820px] lg:pt-36">
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_16%_30%,rgba(208,138,72,0.14),transparent_28%),linear-gradient(120deg,#081422_0%,#0A1628_48%,#12283c_100%)]" />
+      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_16%_30%,rgba(20,87,230,0.34),transparent_30%),linear-gradient(120deg,#04143D_0%,#082B73_52%,#061B4F_100%)]" />
       <div className="industrial-grid absolute inset-0 -z-10 opacity-40" />
 
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
           <div className="reveal-up">
-            <div className="mb-7 inline-flex items-center gap-3 border border-fluid-copper/35 bg-fluid-copper/10 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-[#F3B574]">
+            <div className="mb-7 inline-flex items-center gap-3 border border-white/20 bg-accent-blue/25 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-white">
               <Clock3 className="h-4 w-4" aria-hidden="true" />
               Atención 24/7 — 28+ años resolviendo paros de producción
             </div>
@@ -34,7 +34,7 @@ export function Hero() {
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={whatsappUrl} size="lg" icon={<ArrowRight className="h-5 w-5" />} iconPosition="right" className="w-full bg-[#E83B2F] px-7 py-5 text-base shadow-[0_18px_45px_rgba(232,59,47,0.22)] hover:-translate-y-0.5 hover:bg-[#F04A3D] sm:w-auto" ariaLabel="Resolver un requerimiento industrial urgente por WhatsApp">
+              <Button href={whatsappUrl} size="lg" icon={<ArrowRight className="h-5 w-5" />} iconPosition="right" className="w-full bg-safety-red px-7 py-5 text-base shadow-[0_18px_45px_rgba(227,38,54,0.28)] hover:-translate-y-0.5 hover:bg-red-600 sm:w-auto" ariaLabel="Resolver un requerimiento industrial urgente por WhatsApp">
                 Solicitar cotización urgente
               </Button>
               <Button variant="ghost" size="lg" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="h-5 w-5" />} className="w-full px-7 py-5 sm:w-auto" ariaLabel={`Llamar ahora a SCENA al ${SITE.phone.primary}`}>

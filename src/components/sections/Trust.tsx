@@ -8,7 +8,7 @@ const iconMap = { Clock3, DraftingCompass, Gauge, ScanSearch, TriangleAlert, Wre
 
 export function Trust() {
   return (
-    <Section id="servicios" dark className="relative overflow-hidden bg-[#0B1929]">
+    <Section id="servicios" dark className="relative overflow-hidden bg-navy">
       <div className="industrial-grid absolute inset-0 opacity-30" />
       <Container className="relative">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.65fr] lg:items-end">

@@ -10,7 +10,7 @@ export function Contact() {
   const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(SITE.whatsapp.message)}`
 
   return (
-    <Section id="contacto" dark className="relative overflow-hidden bg-[#081422]">
+    <Section id="contacto" dark className="relative overflow-hidden bg-navy">
       <div className="industrial-grid absolute inset-0 opacity-30" />
       <div className="absolute -right-24 top-0 h-96 w-96 rounded-full bg-fluid-copper/10 blur-3xl" />
       <Container className="relative">

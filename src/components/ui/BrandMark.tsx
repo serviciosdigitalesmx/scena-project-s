@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { cn } from '@/lib/utils'
 
 type BrandMarkProps = {
@@ -9,16 +8,19 @@ type BrandMarkProps = {
 
 export function BrandMark({ className, showTagline = true, compact = false }: BrandMarkProps) {
   return (
-    <div className={cn('flex items-center gap-3', className)}>
-      <div className={cn('shrink-0 overflow-hidden bg-[#55c1dc]', compact ? 'h-10 w-20 md:h-12 md:w-24' : 'h-14 w-28')}>
-        <Image src="/brand/scena-logo.webp" alt="SCENA — Ingeniería y suministro industrial 24/7" width={780} height={390} className="h-full w-full object-cover" priority sizes={compact ? '96px' : '112px'} />
+    <div className={cn('flex items-center', compact ? 'gap-3' : 'gap-4', className)} role="img" aria-label="SCENA — Ingeniería y suministro industrial 24/7">
+      <div className={cn('relative grid shrink-0 place-items-center overflow-hidden bg-accent-blue text-white shadow-[inset_0_0_0_1px_rgba(255,255,255,0.25)]', compact ? 'h-10 w-10 md:h-12 md:w-12' : 'h-14 w-14')}>
+        <span className={cn('font-black tracking-[-0.12em]', compact ? 'text-base md:text-lg' : 'text-xl')}>SC</span>
+        <span className="absolute inset-x-0 bottom-0 h-1.5 bg-safety-red" aria-hidden="true" />
+        <span className="absolute -right-2 top-1/2 h-px w-5 bg-white/50" aria-hidden="true" />
       </div>
-      {showTagline ? (
-        <div className="hidden leading-tight sm:block">
-          <div className="text-xs font-mono font-semibold tracking-[0.3em] text-white">SCENA</div>
-          <div className="mt-1 text-[9px] uppercase tracking-[0.25em] text-gray-text">Ingeniería de aplicación</div>
+      <div className="leading-none">
+        <div className={cn('font-black tracking-[0.18em] text-white', compact ? 'text-lg md:text-xl' : 'text-2xl')}>SCENA</div>
+        <div className="mt-2 flex items-center gap-2">
+          <span className="h-0.5 w-5 bg-safety-red" aria-hidden="true" />
+          <span className={cn('font-mono uppercase tracking-[0.16em] text-gray-text', compact ? 'text-[7px] md:text-[8px]' : 'text-[9px]', !showTagline && 'hidden')}>Ingeniería industrial 24/7</span>
         </div>
-      ) : null}
+      </div>
     </div>
   )
 }

@@ -13,7 +13,7 @@ const footerLinks = [
 export function Footer() {
   const currentYear = new Date().getFullYear()
   return (
-    <footer className="border-t border-white/10 bg-[#06111D] py-14">
+    <footer className="border-t border-white/10 bg-navy py-14">
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
           <div>
@@ -40,7 +40,7 @@ export function Footer() {
               <li className="flex items-center gap-2"><Clock3 className="h-4 w-4 text-fluid-copper" />{SITE.hours}</li>
               <li className="flex items-center gap-2"><Map className="h-4 w-4 text-fluid-copper" />{SITE.coverage}</li>
             </ul>
-            <a href={`https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(SITE.whatsapp.message)}`} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 bg-[#E83B2F] px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-[#F04A3D]"><MessageCircle className="h-4 w-4" />Cotizar ahora</a>
+            <a href={`https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(SITE.whatsapp.message)}`} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 bg-safety-red px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-red-600"><MessageCircle className="h-4 w-4" />Cotizar ahora</a>
           </div>
         </div>
         <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-7 text-xs text-gray-500 md:flex-row md:items-center md:justify-between">

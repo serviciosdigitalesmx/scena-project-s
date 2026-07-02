@@ -15,7 +15,7 @@ export default function Home() {
     '@type': 'LocalBusiness',
     name: SITE.name,
     url: SITE.url,
-    logo: `${SITE.url}/brand/scena-logo.webp`,
+    logo: `${SITE.url}/brand/scena-logo.svg`,
     description: SITE.description,
     email: SITE.email,
     telephone: [SITE.phone.primary, SITE.phone.secondary],

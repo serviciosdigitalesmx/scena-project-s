@@ -9,14 +9,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        navy: '#0A1628',
-        'navy-light': '#1A2A3A',
-        'gray-technical': '#F5F6F8',
-        'gray-text': '#8892A8',
-        'gray-dark': '#1A2A3A',
-        'safety-red': '#DC2626',
-        'accent-blue': '#2D6B9E',
-        'fluid-copper': '#D08A48',
+        navy: '#061B4F',
+        'navy-light': '#0A3588',
+        'gray-technical': '#F3F6FC',
+        'gray-text': '#B8C7E5',
+        'gray-dark': '#071A3F',
+        'safety-red': '#E32636',
+        'accent-blue': '#1457E6',
+        'fluid-copper': '#E32636',
       },
       fontFamily: {
         display: ['var(--font-inter)', 'sans-serif'],

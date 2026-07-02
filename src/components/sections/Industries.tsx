@@ -18,7 +18,7 @@ export function Industries() {
           {INDUSTRIES.map((industry) => {
             const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(`Hola SCENA, necesito resolver una aplicación para ${industry.label}.`)}`
             return (
-              <article key={industry.id} className="group grid overflow-hidden border border-navy/10 bg-[#F4F5F6] sm:grid-cols-[0.86fr_1.14fr]">
+              <article key={industry.id} className="group grid overflow-hidden border border-accent-blue/15 bg-gray-technical sm:grid-cols-[0.86fr_1.14fr]">
                 <div className="overflow-hidden bg-white">
                   <Image src={industry.image} alt={industry.imageAlt} width={industry.width} height={industry.height} loading="lazy" sizes="(max-width: 640px) 100vw, 42vw" className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.035] sm:h-full" />
                 </div>

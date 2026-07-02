@@ -18,7 +18,7 @@ export function Solutions() {
   const quoteUrl = (subject: string) => `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(`Hola SCENA, quiero agregar ${subject} a una cotización. Mi aplicación es:`)}`
 
   return (
-    <Section id="soluciones" className="bg-[#F2F3F5]">
+    <Section id="soluciones" className="bg-gray-technical">
       <Container>
         <div className="grid gap-7 lg:grid-cols-[1fr_0.62fr] lg:items-end">
           <div>
@@ -41,7 +41,7 @@ export function Solutions() {
                   <h3 className="text-2xl font-bold text-navy">{category.label}</h3>
                   <p className="mt-3 min-h-14 text-base leading-7 text-gray-700">{category.summary}</p>
                   <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                    <a href={quoteUrl(category.label)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-[#E83B2F] px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-[#C92E24] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-safety-red focus-visible:ring-offset-2" aria-label={`Agregar ${category.label} a una cotización por WhatsApp`}>
+                    <a href={quoteUrl(category.label)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 bg-safety-red px-4 py-3 text-sm font-bold text-white transition-colors hover:bg-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-safety-red focus-visible:ring-offset-2" aria-label={`Agregar ${category.label} a una cotización por WhatsApp`}>
                       Agregar a cotización
                     </a>
                     <button type="button" onClick={() => setSelectedCategoryId(category.id)} aria-expanded={isSelected} aria-controls="catalogo" className="inline-flex items-center justify-center gap-2 border border-navy/20 px-4 py-3 text-sm font-bold text-navy transition-colors hover:border-navy hover:bg-navy hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fluid-copper focus-visible:ring-offset-2">
