@@ -10,9 +10,8 @@ export function Industries() {
     <Section id="industrias" className="bg-white">
       <Container>
         <div className="max-w-3xl">
-          <span className="section-kicker">Industrias críticas</span>
-          <Heading level={2} className="mt-4 text-navy">Cada sector falla distinto. La solución también.</Heading>
-          <p className="mt-5 text-lg leading-8 text-gray-700">Cuatro entornos donde la compatibilidad, la presión y el tiempo de respuesta cambian por completo la especificación.</p>
+          <span className="section-kicker">Experiencia por sector</span>
+          <Heading level={2} className="mt-4 text-navy">Industrias que mantenemos en operación</Heading>
         </div>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-2">

@@ -5,9 +5,9 @@ import { Container } from '@/components/ui/Container'
 import { SITE } from '@/lib/constants'
 
 const proofPoints = [
-  { value: '30+', label: 'años resolviendo aplicaciones' },
-  { value: '24/7', label: 'atención a requerimientos críticos' },
-  { value: 'MX', label: 'cobertura técnica nacional' },
+  { value: '28+', label: 'años de experiencia' },
+  { value: '24/7', label: 'Atención 24/7' },
+  { value: 'MX', label: 'Cobertura nacional' },
 ]
 
 export function Hero() {
@@ -23,29 +23,28 @@ export function Hero() {
           <div className="reveal-up">
             <div className="mb-7 inline-flex items-center gap-3 border border-fluid-copper/35 bg-fluid-copper/10 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-[#F3B574]">
               <Clock3 className="h-4 w-4" aria-hidden="true" />
-              Respuesta técnica para operaciones críticas
+              Atención 24/7 — 28+ años resolviendo paros de producción
             </div>
             <h1 className="max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">
               Tu operación no se detiene.
-              <span className="mt-3 block text-fluid-copper">SCENA 24/7.</span>
+              <span className="mt-3 block text-fluid-copper">Nosotros tampoco.</span>
             </h1>
             <p className="mt-7 max-w-2xl text-lg leading-8 text-gray-200 md:text-xl">
-              Mangueras, conexiones y componentes industriales con levantamiento técnico para minería, petroquímica y maquinaria pesada.
+              Mangueras, conexiones y componentes industriales con levantamiento técnico en sitio para minería, petroquímica y maquinaria pesada.
             </p>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Button href={whatsappUrl} size="lg" icon={<ArrowRight className="h-5 w-5" />} iconPosition="right" className="w-full bg-[#E83B2F] px-7 py-5 text-base shadow-[0_18px_45px_rgba(232,59,47,0.22)] hover:-translate-y-0.5 hover:bg-[#F04A3D] sm:w-auto" ariaLabel="Resolver un requerimiento industrial urgente por WhatsApp">
-                Resolver mi requerimiento ahora
+                Solicitar cotización urgente
               </Button>
               <Button variant="ghost" size="lg" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="h-5 w-5" />} className="w-full px-7 py-5 sm:w-auto" ariaLabel={`Llamar ahora a SCENA al ${SITE.phone.primary}`}>
-                Llamar ahora
+                Llamar ahora: {SITE.phone.primary}
               </Button>
             </div>
 
             <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-gray-300">
               <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-fluid-copper" />Selección por aplicación</span>
               <span className="flex items-center gap-2"><Map className="h-4 w-4 text-fluid-copper" />Cobertura nacional</span>
-              <a href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} className="font-semibold text-white transition-colors hover:text-fluid-copper">{SITE.phone.primary}</a>
             </div>
           </div>
 
@@ -56,10 +55,6 @@ export function Hero() {
             </div>
             <div className="relative overflow-hidden border border-white/15 bg-white shadow-[0_35px_90px_rgba(0,0,0,0.38)]">
               <Image src="/catalog/manguera-hidraulica.webp" alt="Ensambles de mangueras hidráulicas industriales listos para especificación técnica" width={1600} height={900} className="aspect-[4/3] h-full w-full object-cover" priority sizes="(max-width: 1024px) 100vw, 48vw" />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/85 to-transparent px-6 pb-6 pt-24">
-                <div className="font-mono text-[10px] uppercase tracking-[0.24em] text-fluid-copper">Aplicación hidráulica</div>
-                <p className="mt-2 max-w-md text-sm leading-6 text-gray-200">Presión, fluido, temperatura y terminal: cuatro datos para evitar una selección por apariencia.</p>
-              </div>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'metalica',
     label: 'Metálica',
-    summary: 'Absorbe movimiento y temperatura sin comprometer la línea.',
+    summary: 'Mangueras metálicas flexibles para alta temperatura y vibración.',
     image: '/catalog/manguera-metalica.webp',
     imageAlt: 'Mangueras flexibles de acero inoxidable con malla trenzada',
     width: 800,
@@ -67,7 +67,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'hidraulica',
     label: 'Hidráulica',
-    summary: 'Mantén la potencia hidráulica donde la presión no perdona.',
+    summary: 'Mangueras hidráulicas SAE 100R1AT/R2AT para alta presión.',
     image: '/catalog/manguera-hidraulica.webp',
     imageAlt: 'Mangueras hidráulicas industriales con terminales prensadas',
     width: 1600,
@@ -75,17 +75,17 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
     products: [
       {
         code: 'MH-001',
-        name: 'Manguera hidráulica R1/R2',
-        description: 'Manguera SAE 100R1AT o R2AT para circuitos hidráulicos con refuerzo de una o dos trenzas de acero.',
+        name: 'Manguera hidráulica SAE 100R1AT / R2AT',
+        description: 'Circuitos hidráulicos con refuerzo de una o dos trenzas de acero. Prensado y prueba hidrostática disponibles.',
         image: '/catalog/manguera-hidraulica.webp',
         imageAlt: 'Ensamble de mangueras hidráulicas R1 y R2 con terminales',
         width: 1600,
         height: 900,
-        materials: 'Tubo de hule sintético, refuerzo de acero y cubierta resistente a aceite',
-        pressure: 'Hasta 5,000 PSI, según diámetro y serie',
+        materials: 'Tubo: hule sintético. Refuerzo: 1 o 2 trenzas de acero. Cubierta: resistente a aceite y abrasión.',
+        pressure: 'Hasta 5,000 PSI (según diámetro y serie)',
         temperature: '-40 °C a 100 °C',
-        applications: ['Maquinaria móvil', 'Prensas', 'Unidades de potencia', 'Equipo agrícola y minero'],
-        specifications: ['Norma SAE J517', 'Diámetros de 1/4 a 1 1/4 pulgadas', 'Prensado y prueba disponibles'],
+        applications: ['Maquinaria móvil', 'Prensas', 'Unidades de potencia', 'Equipo minero y agrícola'],
+        specifications: ['Norma SAE J517', 'Diámetros: 1/4" a 1 1/4"', 'Prensado y prueba hidrostática certificada incluidos'],
       },
       {
         code: 'AH-002',
@@ -106,7 +106,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'industrial',
     label: 'Industrial',
-    summary: 'Transfiere agua, aceites y lodos con el refuerzo correcto.',
+    summary: 'Mangueras industriales para abrasión, vapor, químicos y alimentos.',
     image: '/catalog/manguera-industrial.webp',
     imageAlt: 'Familias de mangueras industriales para transferencia de fluidos',
     width: 850,
@@ -131,7 +131,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'contra-incendio',
     label: 'Contra incendio',
-    summary: 'Respuesta confiable para gabinetes y brigadas industriales.',
+    summary: 'Mangueras contra incendio para gabinetes y sistemas de emergencia.',
     image: '/catalog/manguera-contra-incendio.webp',
     imageAlt: 'Mangueras y accesorios para sistemas contra incendio',
     width: 800,
@@ -156,7 +156,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'pvc',
     label: 'PVC',
-    summary: 'Flexibilidad y visibilidad para servicios de agua y aire.',
+    summary: 'Mangueras PVC para agua, aire y servicios generales.',
     image: '/catalog/manguera-pvc.webp',
     imageAlt: 'Mangueras de PVC reforzado para aplicaciones industriales',
     width: 800,
@@ -181,7 +181,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'neumatica',
     label: 'Neumática',
-    summary: 'Conecta actuadores y herramientas con recorridos limpios.',
+    summary: 'Mangueras neumáticas para actuadores, herramientas y automatización.',
     image: '/catalog/manguera-neumatica.webp',
     imageAlt: 'Mangueras neumáticas para aire comprimido y automatización',
     width: 704,
@@ -206,7 +206,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
   {
     id: 'conexiones',
     label: 'Conexiones',
-    summary: 'Resuelve transiciones y desmontajes con el sello adecuado.',
+    summary: 'Conexiones, racores, bridas y acoples para todo tipo de línea.',
     image: '/catalog/conexiones-hidraulicas.webp',
     imageAlt: 'Conexiones hidráulicas industriales de acero',
     width: 697,

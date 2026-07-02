@@ -1,10 +1,10 @@
-import { ClipboardCheck, DraftingCompass, ScanSearch } from 'lucide-react'
+import { Clock3, DraftingCompass, Gauge, ScanSearch, TriangleAlert, Wrench } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'
 import { SERVICES, SITE } from '@/lib/constants'
 
-const iconMap = { ClipboardCheck, DraftingCompass, ScanSearch }
+const iconMap = { Clock3, DraftingCompass, Gauge, ScanSearch, TriangleAlert, Wrench }
 
 export function Trust() {
   return (
@@ -13,13 +13,13 @@ export function Trust() {
       <Container className="relative">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.65fr] lg:items-end">
           <div>
-            <span className="section-kicker">Por qué SCENA</span>
-            <Heading level={2} className="mt-4 max-w-3xl text-white">Menos tiempo buscando. Más certeza para volver a operar.</Heading>
+            <span className="section-kicker">Soporte de ingeniería</span>
+            <Heading level={2} className="mt-4 max-w-3xl text-white">Servicios técnicos especializados</Heading>
           </div>
-          <p className="text-lg leading-8 text-gray-300">No entregamos una lista para que adivines. Convertimos las condiciones de tu planta en una selección defendible.</p>
+          <p className="text-lg leading-8 text-gray-300">Diagnóstico, especificación y respuesta rápida para mantener tu operación en movimiento.</p>
         </div>
 
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, index) => {
             const Icon = iconMap[service.icon]
             const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(service.message)}`
@@ -41,7 +41,7 @@ export function Trust() {
 
         <div className="mt-10 grid gap-px bg-white/10 sm:grid-cols-3">
           {[
-            ['30+', 'años de experiencia'],
+            ['28+', 'años de experiencia'],
             ['24/7', 'atención a urgencias'],
             ['Nacional', 'coordinación de entregas'],
           ].map(([value, label]) => (

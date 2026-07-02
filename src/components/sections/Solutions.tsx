@@ -23,9 +23,9 @@ export function Solutions() {
         <div className="grid gap-7 lg:grid-cols-[1fr_0.62fr] lg:items-end">
           <div>
             <span className="section-kicker">Familias de productos</span>
-            <Heading level={2} className="mt-4 max-w-3xl text-navy">La pieza correcta empieza por la aplicación correcta</Heading>
+            <Heading level={2} className="mt-4 max-w-3xl text-navy">¿Qué necesitas resolver?</Heading>
           </div>
-          <p className="text-lg leading-8 text-gray-700">Fotos reales, familias claras y cotización sin precios ficticios. Selecciona una categoría para revisar su ficha técnica.</p>
+          <p className="text-lg leading-8 text-gray-700">Selecciona una familia y agrégala a tu lista de cotización. Un especialista te confirma especificaciones.</p>
         </div>
 
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -57,10 +57,10 @@ export function Solutions() {
         <div id="catalogo" className="mt-16 scroll-mt-28 border border-navy/10 bg-navy p-6 text-white md:p-10">
           <div className="flex flex-col justify-between gap-5 border-b border-white/10 pb-7 md:flex-row md:items-end">
             <div>
-              <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-fluid-copper">Catálogo técnico seleccionado</span>
-              <h3 className="mt-3 text-3xl font-bold md:text-4xl">{selectedCategory.label}</h3>
+              <span className="font-mono text-[11px] uppercase tracking-[0.22em] text-fluid-copper">Catálogo técnico</span>
+              <h3 className="mt-3 text-3xl font-bold md:text-4xl">{selectedCategory.id === 'hidraulica' ? 'Mangueras hidráulicas' : selectedCategory.label}</h3>
             </div>
-            <p className="max-w-xl text-base leading-7 text-gray-300">{selectedCategory.summary} Revisa los rangos de referencia; ingeniería confirma la selección final según tu operación.</p>
+            <p className="max-w-xl text-base leading-7 text-gray-300">{selectedCategory.id === 'hidraulica' ? 'Circuitos hidráulicos de alta presión. Especificaciones de referencia — ingeniería confirma selección según tu operación.' : `${selectedCategory.summary} Especificaciones de referencia — ingeniería confirma selección según tu operación.`}</p>
           </div>
 
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
@@ -101,7 +101,7 @@ export function Solutions() {
                       </ul>
                     </div>
                   </div>
-                  <Button href={quoteUrl(`${product.code} - ${product.name}`)} icon={<MessageCircle className="h-4 w-4" />} className="mt-6 w-full sm:w-auto" ariaLabel={`Validar aplicación del producto ${product.code} por WhatsApp`}>Validar aplicación</Button>
+                  <Button href={quoteUrl(`${product.code} - ${product.name}`)} icon={<MessageCircle className="h-4 w-4" />} className="mt-6 w-full sm:w-auto" ariaLabel={`Agregar el producto ${product.code} a una cotización por WhatsApp`}>Agregar a cotización</Button>
                 </div>
               </article>
             ))}

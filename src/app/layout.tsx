@@ -10,12 +10,12 @@ const ibmPlex = IBM_Plex_Mono({ weight: ['400', '600'], subsets: ['latin'], vari
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
 
 export const metadata: Metadata = {
-  title: 'SCENA | Soluciones 24/7 en mangueras y conexiones industriales — Minería, petroquímica y maquinaria',
+  title: 'SCENA | Mangueras, conexiones y componentes industriales 24/7 — Minería, Petroquímica, Transporte',
   description: SITE.description,
   metadataBase: new URL(SITE.url),
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'SCENA | Soluciones industriales 24/7',
+    title: 'SCENA — Tu operación no se detiene. Nosotros tampoco.',
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'SCENA | Soluciones industriales 24/7',
+    title: 'SCENA — Tu operación no se detiene. Nosotros tampoco.',
     description: SITE.description,
     images: ['/catalog/manguera-hidraulica.webp'],
   },

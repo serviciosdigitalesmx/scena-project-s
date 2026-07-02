@@ -16,13 +16,13 @@ export function Contact() {
       <Container className="relative">
         <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:gap-16">
           <div>
-            <span className="section-kicker">Cotización técnica 24/7</span>
-            <Heading level={2} className="mt-4 text-white">Envía el problema. Ingeniería define el siguiente paso.</Heading>
-            <p className="mt-6 text-lg leading-8 text-gray-300">Comparte foto, medida, aplicación o ficha técnica. Te ayudamos a ordenar los datos críticos antes de seleccionar.</p>
+            <span className="section-kicker">Atención 24/7</span>
+            <Heading level={2} className="mt-4 text-white">¿Línea detenida, fuga o componente crítico sin especificación?</Heading>
+            <p className="mt-6 text-lg leading-8 text-gray-300">Envíanos foto, medida o descripción. Nuestro equipo identifica la solución.</p>
 
             <div className="mt-8 border-l-2 border-fluid-copper pl-5">
-              <div className="flex items-center gap-3 text-white"><ShieldCheck className="h-5 w-5 text-fluid-copper" /><strong>Más de 30 años de experiencia industrial</strong></div>
-              <p className="mt-2 text-sm leading-6 text-gray-400">Atención directa para requerimientos planeados y urgencias de operación.</p>
+              <div className="flex items-center gap-3 text-white"><ShieldCheck className="h-5 w-5 text-fluid-copper" /><strong>Respuesta en menos de 4 horas</strong></div>
+              <p className="mt-2 text-sm leading-6 text-gray-400">Levantamiento técnico en sitio disponible.</p>
             </div>
 
             <div className="mt-9 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">

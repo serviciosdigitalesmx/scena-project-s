@@ -33,7 +33,7 @@ export function Header() {
           </ul>
           <div className="flex items-center gap-3 pl-6 border-l border-white/10">
             <Button variant="ghost" size="sm" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="w-4 h-4" />} ariaLabel="Llamar a SCENA">{SITE.phone.primary}</Button>
-            <Button size="sm" href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} ariaLabel="Solicitar cotización urgente por WhatsApp">Urgencia 24/7</Button>
+            <Button size="sm" href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} ariaLabel="Abrir WhatsApp de SCENA">WhatsApp</Button>
           </div>
         </nav>
         <button className="-mr-2 p-2 text-white lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label={isMenuOpen ? 'Cerrar menú' : 'Abrir menú'} aria-expanded={isMenuOpen}>
@@ -54,7 +54,7 @@ export function Header() {
               </ul>
               <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
                 <Button variant="ghost" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Llamar ahora</Button>
-                <Button href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Urgencia 24/7</Button>
+                <Button href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>WhatsApp</Button>
               </div>
             </div>
         </div>

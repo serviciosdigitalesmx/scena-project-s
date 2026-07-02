@@ -26,6 +26,7 @@ export function RequirementForm() {
 
   return (
     <form onSubmit={handleSubmit} className="border border-white/10 bg-white/[0.055] p-6 shadow-2xl backdrop-blur md:p-8">
+      <h3 className="mb-6 text-2xl font-bold text-white">Solicita tu cotización técnica</h3>
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="text-sm font-semibold text-white">
           Nombre
@@ -65,7 +66,7 @@ export function RequirementForm() {
       <p className="mt-2 text-xs leading-5 text-gray-400">Por seguridad, el archivo se adjunta manualmente cuando WhatsApp abra el chat.</p>
 
       <Button type="submit" size="lg" icon={<ArrowRight className="h-5 w-5" />} iconPosition="right" className="mt-6 w-full bg-[#E83B2F] py-4 hover:bg-[#F04A3D]">
-        Abrir cotización en WhatsApp
+        Enviar por WhatsApp
       </Button>
     </form>
   )
