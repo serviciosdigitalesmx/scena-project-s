@@ -4,12 +4,12 @@ export const SITE = {
   description: 'Atención 24/7 en mangueras hidráulicas, conexiones industriales y componentes para operaciones críticas. Levantamiento técnico en sitio. 28+ años de experiencia. Cotiza por WhatsApp.',
   url: process.env.NEXT_PUBLIC_SITE_URL || 'https://scena.com.mx',
   phone: {
-    primary: '933 132 1193',
-    secondary: '813 715 7752',
+    primary: '+52 1 81 3715 7752',
+    secondary: '+52 1 81 3715 7752',
   },
-  email: 'albertodelacruz@scena.com.mx',
+  email: 'ventas@scena.com.mx',
   whatsapp: {
-    number: '529331321193',
+    number: '5218137157752',
     message: 'Hola SCENA, tengo un requerimiento industrial urgente y necesito apoyo técnico 24/7:',
   },
   coverage: 'Cobertura nacional en México',

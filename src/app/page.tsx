@@ -6,7 +6,7 @@ import { ApplicationCases } from '@/components/sections/ApplicationCases'
 import { Process } from '@/components/sections/Process'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contact } from '@/components/sections/Contact'
-import { CATALOG_PRODUCTS, FAQS } from '@/lib/catalog'
+import { CATALOG_PRODUCTS, FAQS } from '@/lib/catalog-all'
 import { SITE } from '@/lib/constants'
 
 export default function Home() {

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
-import { APPLICATION_CASES, CATALOG_PRODUCTS } from '@/lib/catalog'
+import { APPLICATION_CASES, CATALOG_PRODUCTS } from '@/lib/catalog-all'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'

@@ -1,5 +1,5 @@
 import { ChevronDown } from 'lucide-react'
-import { FAQS } from '@/lib/catalog'
+import { FAQS } from '@/lib/catalog-all'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'
