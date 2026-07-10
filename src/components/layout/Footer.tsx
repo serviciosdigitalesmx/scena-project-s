@@ -5,7 +5,7 @@ import { BrandMark } from '@/components/ui/BrandMark'
 
 const footerLinks = [
   { label: 'Familias de productos', href: '/#soluciones' },
-  { label: 'Catálogo técnico', href: '/#catalogo' },
+  { label: 'Catálogo técnico', href: '/catalogo' },
   { label: 'Industrias', href: '/#industrias' },
   { label: 'Casos de aplicación', href: '/#casos' },
 ]

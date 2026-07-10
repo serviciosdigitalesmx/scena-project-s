@@ -27,7 +27,7 @@ export function Header() {
           <ul className="flex items-center gap-6">
             {NAVIGATION.categories.map((cat) => (
               <li key={cat.id}>
-                <Link href={`/#${cat.id}`} className="text-sm font-mono text-gray-text hover:text-white transition-colors">{cat.label}</Link>
+                <Link href={cat.id === 'catalogo' ? '/catalogo' : `/#${cat.id}`} className="text-sm font-mono text-gray-text hover:text-white transition-colors">{cat.label}</Link>
               </li>
             ))}
           </ul>
@@ -46,7 +46,7 @@ export function Header() {
               <ul className="space-y-4">
                 {NAVIGATION.categories.map((cat) => (
                   <li key={cat.id}>
-                    <Link href={`/#${cat.id}`} className="block text-lg font-mono text-gray-text hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
+                    <Link href={cat.id === 'catalogo' ? '/catalogo' : `/#${cat.id}`} className="block text-lg font-mono text-gray-text hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
                       {cat.label}
                     </Link>
                   </li>

@@ -1,12 +1,11 @@
 import { Hero } from '@/components/sections/Hero'
-import { Solutions } from '@/components/sections/Solutions'
 import { Trust } from '@/components/sections/Trust'
 import { Industries } from '@/components/sections/Industries'
 import { ApplicationCases } from '@/components/sections/ApplicationCases'
 import { Process } from '@/components/sections/Process'
 import { FAQ } from '@/components/sections/FAQ'
 import { Contact } from '@/components/sections/Contact'
-import { CATALOG_PRODUCTS, FAQS } from '@/lib/catalog-all'
+import { FAQS } from '@/lib/catalog-all'
 import { SITE } from '@/lib/constants'
 
 export default function Home() {
@@ -36,24 +35,6 @@ export default function Home() {
     },
   }
 
-  const productSchema = {
-    '@context': 'https://schema.org',
-    '@graph': CATALOG_PRODUCTS.map((product) => ({
-      '@type': 'Product',
-      name: product.name,
-      sku: product.code,
-      image: `${SITE.url}${product.image}`,
-      description: product.description,
-      material: product.materials,
-      brand: { '@type': 'Brand', name: 'SCENA' },
-      additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Presión de trabajo', value: product.pressure },
-        { '@type': 'PropertyValue', name: 'Temperatura', value: product.temperature },
-        { '@type': 'PropertyValue', name: 'Aplicaciones', value: product.applications.join(', ') },
-      ],
-    })),
-  }
-
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -67,10 +48,8 @@ export default function Home() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Hero />
-      <Solutions />
       <Trust />
       <Industries />
       <ApplicationCases />
