@@ -1,10 +1,10 @@
-import { Clock3, DraftingCompass, Gauge, ScanSearch, TriangleAlert, Wrench } from 'lucide-react'
+import { Clock3, DraftingCompass, Gauge, HeadphonesIcon, ScanSearch, TriangleAlert, Wrench } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Section } from '@/components/ui/Section'
 import { Heading } from '@/components/ui/Heading'
 import { SERVICES, SITE } from '@/lib/constants'
 
-const iconMap = { Clock3, DraftingCompass, Gauge, ScanSearch, TriangleAlert, Wrench }
+const iconMap = { Clock3, DraftingCompass, Gauge, HeadphonesIcon, ScanSearch, TriangleAlert, Wrench }
 
 export function Trust() {
   return (

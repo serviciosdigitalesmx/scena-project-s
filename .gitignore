@@ -8,3 +8,4 @@ tsconfig.tsbuildinfo
 
 # The Medusa starter is maintained as its own Git repository.
 scena-b2b-catalog/
+.vercel

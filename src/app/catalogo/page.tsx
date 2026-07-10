@@ -7,8 +7,8 @@ import { CATALOG_PRODUCTS, FAQS } from '@/lib/catalog-all'
 import { SITE } from '@/lib/constants'
 
 export const metadata = {
-  title: 'Catálogo técnico | SCENA',
-  description: 'Catálogo interactivo por categorías con fichas expandibles, listo para consulta técnica y cotización.',
+  title: 'Catálogo | SCENA',
+  description: 'Productos industriales SCENA: mangueras, conexiones, adaptadores, acoples y especialidades para planta.',
 }
 
 export default function CatalogPage() {
@@ -44,20 +44,19 @@ export default function CatalogPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Section className="bg-navy pt-28 md:pt-32">
+      <Section className="bg-navy pt-24 md:pt-28">
         <Container>
-          <div className="max-w-3xl">
-            <span className="section-kicker">Catálogo interactivo</span>
-            <Heading level={1} className="mt-4 text-white">Inventario técnico por categorías</Heading>
-            <p className="mt-5 text-lg leading-8 text-gray-text">
-              Aquí está el catálogo completo en formato navegable, sin scroll infinito y con fichas que se abren por familia y producto.
-            </p>
+          <div className="flex flex-col gap-5 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="section-kicker">SCENA</span>
+              <Heading level={1} className="mt-3 text-white">Catálogo</Heading>
+            </div>
+            <ContactActions
+              dark
+              message="Hola SCENA, quiero cotizar productos del catálogo."
+              className="mt-0 border-t-0 pt-0"
+            />
           </div>
-          <ContactActions
-            dark
-            message="Hola SCENA, quiero revisar el catálogo técnico interactivo y cotizar una aplicación."
-            className="mt-8"
-          />
         </Container>
       </Section>
       <Solutions />
