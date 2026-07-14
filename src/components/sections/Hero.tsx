@@ -54,7 +54,7 @@ export function Hero() {
               <div className="mt-1 flex items-center gap-2 text-sm font-semibold text-white"><span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />Atención 24/7</div>
             </div>
             <div className="relative overflow-hidden border border-white/15 bg-white shadow-[0_35px_90px_rgba(0,0,0,0.38)]">
-              <Image src="/catalog/manguera-hidraulica.webp" alt="Ensambles de mangueras hidráulicas industriales listos para especificación técnica" width={1600} height={900} className="aspect-[4/3] h-full w-full object-cover" priority sizes="(max-width: 1024px) 100vw, 48vw" />
+              <Image src="/catalog/manguera-metalica.webp" alt="Manguera metálica industrial SCENA" width={800} height={800} className="aspect-[4/3] h-full w-full object-cover" priority sizes="(max-width: 1024px) 100vw, 48vw" />
             </div>
           </div>
         </div>

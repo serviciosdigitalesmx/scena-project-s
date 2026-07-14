@@ -8,8 +8,8 @@ export default function Hero() {
     <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/catalog/manguera-hidraulica.webp"
-          alt=""
+          src="/catalog/manguera-metalica.webp"
+          alt="Manguera metálica industrial SCENA"
           className="w-full h-full object-cover opacity-20"
         />
       </div>
