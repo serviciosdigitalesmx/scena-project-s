@@ -10,17 +10,19 @@ export function Hero() {
   return (
     <section className="relative flex min-h-[90vh] lg:min-h-[800px] items-center pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-navy">
       {/* Background Image - Full width */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/hero-industrial.jpg"
-          alt="Operación industrial SCENA"
-          fill
-          className="object-cover object-[25%_center] scale-[1.05] translate-x-8 md:translate-x-16 brightness-110 contrast-105"
-          priority
-          sizes="100vw"
-        />
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 translate-x-12 md:translate-x-20">
+          <Image
+            src="/hero-industrial.jpg"
+            alt="Operación industrial SCENA"
+            fill
+            className="animate-slow-zoom object-cover object-[15%_center] brightness-110 contrast-125 saturate-105"
+            priority
+            sizes="100vw"
+          />
+        </div>
         {/* Dark overlay for text legibility - Lighter to show worker */}
-        <div className="absolute inset-0 bg-navy/60 sm:bg-gradient-to-r sm:from-navy/80 sm:via-navy/40 sm:to-transparent" />
+        <div className="absolute inset-0 bg-navy/40 sm:bg-gradient-to-r sm:from-navy/70 sm:via-navy/20 sm:to-transparent" />
       </div>
 
       <Container className="relative z-10 w-full">
@@ -29,7 +31,7 @@ export function Hero() {
           {/* Simple, non-SaaS Kicker */}
           <div className="mb-6 flex items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] text-gray-300">
             <span className="h-px w-8 bg-safety-red" />
-            Ingeniería industrial especializada • Atención 24/7
+            Especialistas en conducción de fluidos para la industria
           </div>
           
           <h1 className="text-6xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">

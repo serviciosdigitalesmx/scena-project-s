@@ -38,8 +38,15 @@ export function Header() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-3 pl-6 border-l border-white/10">
-            <Button variant="ghost" size="sm" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="w-4 h-4" />} ariaLabel="Llamar a SCENA">{SITE.phone.primary}</Button>
+          <div className="flex items-center gap-4 pl-6 border-l border-white/10">
+            <a 
+              href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} 
+              className="flex items-center gap-2 text-sm font-medium text-gray-300 hover:text-white transition-colors" 
+              aria-label="Llamar a SCENA"
+            >
+              <Phone className="w-4 h-4" />
+              {SITE.phone.primary}
+            </a>
             <Button size="sm" href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} ariaLabel="Abrir WhatsApp de SCENA">WhatsApp</Button>
           </div>
         </nav>
@@ -59,8 +66,15 @@ export function Header() {
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-col gap-3 pt-6 border-t border-white/10">
-                <Button variant="ghost" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>Llamar ahora</Button>
+              <div className="flex flex-col gap-4 pt-6 border-t border-white/10">
+                <a 
+                  href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} 
+                  className="flex items-center justify-center gap-2 text-base font-medium text-gray-300 hover:text-white transition-colors" 
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <Phone className="w-5 h-5" />
+                  Llamar ahora
+                </a>
                 <Button href={whatsappUrl} icon={<MessageCircle className="w-4 h-4" />} className="justify-center" onClick={() => setIsMenuOpen(false)}>WhatsApp</Button>
               </div>
             </div>
