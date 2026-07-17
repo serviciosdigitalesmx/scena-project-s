@@ -18,7 +18,14 @@ export function Header() {
   }, [])
   const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(SITE.whatsapp.message)}`
   return (
-    <header className={cn('fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-xl transition-shadow duration-300', isScrolled && 'shadow-[0_18px_50px_rgba(0,0,0,0.25)]')}>
+    <header 
+      className={cn(
+        'fixed inset-x-0 top-0 z-50 transition-all duration-300', 
+        isScrolled 
+          ? 'bg-navy/95 backdrop-blur-xl border-b border-white/10 shadow-[0_18px_50px_rgba(0,0,0,0.25)]' 
+          : 'bg-[#081734]/35 backdrop-blur-[12px] border-b border-white/[0.08]'
+      )}
+    >
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:h-24 md:px-12">
         <Link href="/" className="shrink-0" aria-label="Ir al inicio">
           <BrandMark compact />
