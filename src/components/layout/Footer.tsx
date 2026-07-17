@@ -1,7 +1,7 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Clock3, Mail, Map, MessageCircle, Phone } from 'lucide-react'
 import { SITE } from '@/lib/constants'
-import { BrandMark } from '@/components/ui/BrandMark'
 
 const footerLinks = [
   { label: 'Familias de productos', href: '/#soluciones' },
@@ -17,7 +17,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6 md:px-12">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1.2fr_0.8fr_1fr_1fr]">
           <div>
-            <BrandMark className="items-start" />
+            <Link href="/" className="inline-block bg-white rounded-xl p-4 shadow-sm" aria-label="Ir al inicio">
+              <Image 
+                src="/logo-scena.png" 
+                alt="SCENA" 
+                width={200} 
+                height={66} 
+                className="w-40 h-auto"
+              />
+            </Link>
             <p className="mt-4 max-w-sm text-sm leading-6 text-gray-400">Mangueras, conexiones y componentes para conducción de fluidos con selección por aplicación.</p>
           </div>
           <div>
