@@ -28,15 +28,17 @@ export function Hero() {
       <Container className="relative z-10 w-full">
         {/* Content restricted to the left side to avoid the worker on the right */}
         <div className="max-w-3xl lg:max-w-4xl">
-          {/* Simple, non-SaaS Kicker */}
-          <div className="mb-6 flex items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] text-gray-300">
-            <span className="h-px w-8 bg-safety-red" />
-            Especialistas en conducción de fluidos para la industria
+          <div className="flex items-center gap-4 mb-8 md:mb-10 opacity-90">
+            <div className="w-8 md:w-12 h-[2px] bg-safety-red" />
+            <span className="font-mono text-sm md:text-base font-semibold uppercase tracking-[0.15em] text-gray-300">
+              Especialistas en conducción de fluidos para la industria
+            </span>
           </div>
-          
-          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[5rem] xl:text-[5.5rem]">
-            Tu operación no se detiene.<br className="hidden sm:block" />
-            <span className="block mt-2 text-white">Nosotros tampoco.</span>
+
+          <h1 className="text-[3.5rem] md:text-6xl lg:text-[6.5rem] font-bold tracking-tight text-white leading-[1.05] mb-8">
+            Tu operación<br />
+            no se detiene.<br />
+            <span className="block mt-4 md:mt-6">Nosotros tampoco.</span>
           </h1>
           
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-gray-200 sm:text-xl">
