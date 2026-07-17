@@ -1,71 +1,79 @@
 import Image from 'next/image'
-import { ArrowRight, CheckCircle2, Clock3, Map, Phone } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Map, Phone } from 'lucide-react'
 import { Button } from '@/components/ui/Button'
 import { Container } from '@/components/ui/Container'
 import { SITE } from '@/lib/constants'
-
-const proofPoints = [
-  { value: '28+', label: 'años de experiencia' },
-  { value: '24/7', label: 'Atención 24/7' },
-  { value: 'MX', label: 'Cobertura nacional' },
-]
 
 export function Hero() {
   const whatsappUrl = `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(SITE.whatsapp.message)}`
 
   return (
-    <section className="relative isolate overflow-hidden bg-navy pb-20 pt-32 md:pb-28 md:pt-40 lg:min-h-[820px] lg:pt-36">
-      <div className="absolute inset-0 -z-20 bg-[radial-gradient(circle_at_16%_30%,rgba(20,87,230,0.34),transparent_30%),linear-gradient(120deg,#04143D_0%,#082B73_52%,#061B4F_100%)]" />
-      <div className="industrial-grid absolute inset-0 -z-10 opacity-40" />
+    <section className="relative flex min-h-[90vh] lg:min-h-[800px] items-center pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-navy">
+      {/* Background Image - Full width */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero-industrial.jpg"
+          alt="Operación industrial SCENA"
+          fill
+          className="object-cover object-center"
+          priority
+          sizes="100vw"
+        />
+        {/* Dark overlay for text legibility (Navy blue gradient that fades towards the worker on the right) */}
+        <div className="absolute inset-0 bg-navy/80 sm:bg-gradient-to-r sm:from-navy/95 sm:via-navy/70 sm:to-navy/20" />
+      </div>
 
-      <Container>
-        <div className="grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div className="reveal-up">
-            <div className="mb-7 inline-flex items-center gap-3 border border-white/20 bg-accent-blue/25 px-4 py-2 font-mono text-[11px] uppercase tracking-[0.2em] text-white">
-              <Clock3 className="h-4 w-4" aria-hidden="true" />
-              Atención 24/7 — 28+ años resolviendo paros de producción
-            </div>
-            <h1 className="max-w-4xl text-5xl font-extrabold leading-[0.98] tracking-[-0.055em] text-white sm:text-6xl lg:text-7xl">
-              Tu operación no se detiene.
-              <span className="mt-3 block text-fluid-copper">Nosotros tampoco.</span>
-            </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-gray-200 md:text-xl">
-              Mangueras, conexiones y componentes industriales con levantamiento técnico en sitio para minería, petroquímica y maquinaria pesada.
-            </p>
+      <Container className="relative z-10 w-full">
+        {/* Content restricted to the left side to avoid the worker on the right */}
+        <div className="max-w-3xl lg:max-w-4xl">
+          {/* Simple, non-SaaS Kicker */}
+          <div className="mb-6 flex items-center gap-4 text-sm font-bold uppercase tracking-[0.2em] text-gray-300">
+            <span className="h-px w-8 bg-safety-red" />
+            Atención 24/7 — 28+ años de experiencia
+          </div>
+          
+          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            Tu operación no se detiene.<br className="hidden sm:block" />
+            <span className="block mt-2 text-white">Nosotros tampoco.</span>
+          </h1>
+          
+          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-gray-300 sm:text-xl">
+            Mangueras, conexiones y componentes industriales con levantamiento técnico en sitio para minería, petroquímica y maquinaria pesada.
+          </p>
 
-            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-              <Button href={whatsappUrl} size="lg" icon={<ArrowRight className="h-5 w-5" />} iconPosition="right" className="w-full bg-safety-red px-7 py-5 text-base shadow-[0_18px_45px_rgba(227,38,54,0.28)] hover:-translate-y-0.5 hover:bg-red-600 sm:w-auto" ariaLabel="Resolver un requerimiento industrial urgente por WhatsApp">
-                Solicitar cotización urgente
-              </Button>
-              <Button variant="ghost" size="lg" href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} icon={<Phone className="h-5 w-5" />} className="w-full px-7 py-5 sm:w-auto" ariaLabel={`Llamar ahora a SCENA al ${SITE.phone.primary}`}>
-                Llamar ahora: {SITE.phone.primary}
-              </Button>
-            </div>
-
-            <div className="mt-10 flex flex-wrap gap-x-7 gap-y-3 text-sm text-gray-300">
-              <span className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-fluid-copper" />Selección por aplicación</span>
-              <span className="flex items-center gap-2"><Map className="h-4 w-4 text-fluid-copper" />Cobertura nacional</span>
-            </div>
+          <div className="mt-12 flex flex-col sm:flex-row gap-5">
+            <Button 
+              href={whatsappUrl} 
+              size="lg" 
+              icon={<ArrowRight className="h-5 w-5" />} 
+              iconPosition="right" 
+              className="bg-safety-red text-white hover:bg-red-700 w-full sm:w-auto"
+              ariaLabel="Solicitar cotización urgente"
+            >
+              Solicitar cotización urgente
+            </Button>
+            <Button 
+              variant="ghost" 
+              size="lg" 
+              href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} 
+              icon={<Phone className="h-5 w-5" />} 
+              className="border-white text-white hover:bg-safety-red hover:border-safety-red hover:text-white w-full sm:w-auto"
+              ariaLabel={`Llamar ahora a SCENA al ${SITE.phone.primary}`}
+            >
+              Llamar ahora: {SITE.phone.primary}
+            </Button>
           </div>
 
-          <div className="reveal-up relative [animation-delay:120ms]">
-            <div className="absolute -left-5 top-10 z-10 hidden border border-fluid-copper/40 bg-navy/95 px-5 py-4 shadow-2xl backdrop-blur md:block">
-              <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-fluid-copper">Línea activa</div>
-              <div className="mt-1 flex items-center gap-2 text-sm font-semibold text-white"><span className="h-2 w-2 animate-pulse rounded-full bg-emerald-400" />Atención 24/7</div>
-            </div>
-            <div className="relative overflow-hidden border border-white/15 bg-white shadow-[0_35px_90px_rgba(0,0,0,0.38)]">
-              <Image src="/catalog/manguera-metalica.webp" alt="Manguera metálica industrial SCENA" width={800} height={800} className="aspect-[4/3] h-full w-full object-cover" priority sizes="(max-width: 1024px) 100vw, 48vw" />
-            </div>
+          <div className="mt-14 flex flex-wrap gap-x-10 gap-y-4 text-sm font-medium text-gray-300">
+            <span className="flex items-center gap-3">
+              <CheckCircle2 className="h-5 w-5 text-safety-red" />
+              Selección por aplicación
+            </span>
+            <span className="flex items-center gap-3">
+              <Map className="h-5 w-5 text-safety-red" />
+              Cobertura nacional
+            </span>
           </div>
-        </div>
-
-        <div className="mt-16 grid divide-y divide-white/10 border-y border-white/10 sm:grid-cols-3 sm:divide-x sm:divide-y-0 lg:mt-20">
-          {proofPoints.map((point) => (
-            <div key={point.value} className="flex items-baseline gap-4 py-5 sm:px-7 sm:first:pl-0">
-              <span className="text-3xl font-extrabold text-white">{point.value}</span>
-              <span className="max-w-40 text-sm leading-5 text-gray-300">{point.label}</span>
-            </div>
-          ))}
         </div>
       </Container>
     </section>
