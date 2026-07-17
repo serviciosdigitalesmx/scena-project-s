@@ -32,7 +32,7 @@ export function Header() {
       <div className="mx-auto flex h-24 max-w-7xl items-center justify-between px-6 md:h-28 md:px-12">
         <Link 
           href="/" 
-          className="shrink-0 relative h-10 w-36 md:h-12 md:w-44 overflow-hidden mt-2 mix-blend-screen" 
+          className="shrink-0 relative h-10 w-36 md:h-12 md:w-44 overflow-hidden mt-2" 
           aria-label="Ir al inicio"
           onClick={(e) => {
             if (window.location.pathname === '/') {
@@ -45,7 +45,7 @@ export function Header() {
             src="/logo-scena.png" 
             alt="SCENA" 
             fill 
-            className="object-cover object-top invert grayscale brightness-200 contrast-200"
+            className="object-cover object-top brightness-0 invert"
             priority
           />
         </Link>
