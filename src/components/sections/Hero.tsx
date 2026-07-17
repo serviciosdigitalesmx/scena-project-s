@@ -11,12 +11,12 @@ export function Hero() {
     <section className="relative flex min-h-[90vh] lg:min-h-[800px] items-center pt-32 pb-24 md:pt-48 md:pb-32 overflow-hidden bg-navy">
       {/* Background Image - Full width */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 translate-x-12 md:translate-x-20">
+        <div className="absolute inset-0">
           <Image
             src="/hero-industrial.jpg"
             alt="Operación industrial SCENA"
             fill
-            className="animate-slow-zoom object-cover object-[15%_center] brightness-110 contrast-125 saturate-105"
+            className="animate-slow-zoom object-cover object-[70%_center] brightness-110 contrast-125 saturate-105"
             priority
             sizes="100vw"
           />
@@ -34,7 +34,7 @@ export function Hero() {
             Especialistas en conducción de fluidos para la industria
           </div>
           
-          <h1 className="text-6xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-7xl lg:text-[5.5rem] xl:text-[6.5rem]">
+          <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[5rem] xl:text-[5.5rem]">
             Tu operación no se detiene.<br className="hidden sm:block" />
             <span className="block mt-2 text-white">Nosotros tampoco.</span>
           </h1>
@@ -50,9 +50,9 @@ export function Hero() {
               icon={<ArrowRight className="h-5 w-5" />} 
               iconPosition="right" 
               className="bg-safety-red text-white hover:bg-red-700 w-full sm:w-auto px-10 py-5 text-lg"
-              ariaLabel="Solicitar cotización urgente"
+              ariaLabel="Hablar con un ingeniero por WhatsApp"
             >
-              Solicitar cotización urgente
+              Hablar con un ingeniero
             </Button>
             <Button 
               variant="ghost" 
@@ -60,9 +60,9 @@ export function Hero() {
               href={`tel:${SITE.phone.primary.replaceAll(' ', '')}`} 
               icon={<Phone className="h-5 w-5" />} 
               className="border-white text-white hover:bg-safety-red hover:border-safety-red hover:text-white w-full sm:w-auto px-10 py-5 text-lg"
-              ariaLabel={`Llamar ahora a SCENA al ${SITE.phone.primary}`}
+              ariaLabel="Llamar ahora a SCENA"
             >
-              Llamar ahora: {SITE.phone.primary}
+              Llamar ahora
             </Button>
           </div>
 
