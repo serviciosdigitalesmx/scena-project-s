@@ -1,5 +1,4 @@
 import { Hero } from '@/components/sections/Hero'
-import { Solutions } from '@/components/sections/Solutions'
 import { Trust } from '@/components/sections/Trust'
 import { Industries } from '@/components/sections/Industries'
 import { ApplicationCases } from '@/components/sections/ApplicationCases'
@@ -52,7 +51,6 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Hero />
-      <Solutions />
       <Trust />
       <Industries />
       <ApplicationCases />

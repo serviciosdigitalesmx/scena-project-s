@@ -1,14 +1,15 @@
+import type { Metadata } from 'next'
 import { Solutions } from '@/components/sections/Solutions'
-import { Container } from '@/components/ui/Container'
-import { Section } from '@/components/ui/Section'
-import { Heading } from '@/components/ui/Heading'
-import { ContactActions } from '@/components/ui/ContactActions'
 import { CATALOG_PRODUCTS, FAQS } from '@/lib/catalog-all'
 import { SITE } from '@/lib/constants'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Catálogo | SCENA',
-  description: 'Productos industriales SCENA: mangueras, conexiones, adaptadores, acoples y especialidades para planta.',
+  description:
+    'Catálogo de mangueras, conexiones y componentes industriales SCENA.',
+  alternates: {
+    canonical: '/catalogo',
+  },
 }
 
 export default function CatalogPage() {
@@ -21,11 +22,26 @@ export default function CatalogPage() {
       image: `${SITE.url}${product.image}`,
       description: product.description,
       material: product.materials,
-      brand: { '@type': 'Brand', name: 'SCENA' },
+      brand: {
+        '@type': 'Brand',
+        name: 'SCENA',
+      },
       additionalProperty: [
-        { '@type': 'PropertyValue', name: 'Presión de trabajo', value: product.pressure },
-        { '@type': 'PropertyValue', name: 'Temperatura', value: product.temperature },
-        { '@type': 'PropertyValue', name: 'Aplicaciones', value: product.applications.join(', ') },
+        {
+          '@type': 'PropertyValue',
+          name: 'Presión de trabajo',
+          value: product.pressure,
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Temperatura',
+          value: product.temperature,
+        },
+        {
+          '@type': 'PropertyValue',
+          name: 'Aplicaciones',
+          value: product.applications.join(', '),
+        },
       ],
     })),
   }
@@ -36,30 +52,32 @@ export default function CatalogPage() {
     mainEntity: FAQS.map((item) => ({
       '@type': 'Question',
       name: item.question,
-      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
     })),
   }
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <Section className="bg-navy pt-24 md:pt-28">
-        <Container>
-          <div className="flex flex-col gap-5 border-b border-white/10 pb-8 md:flex-row md:items-end md:justify-between">
-            <div>
-              <span className="section-kicker">SCENA</span>
-              <Heading level={1} className="mt-3 text-white">Catálogo</Heading>
-            </div>
-            <ContactActions
-              dark
-              message="Hola SCENA, quiero cotizar productos del catálogo."
-              className="mt-0 border-t-0 pt-0"
-            />
-          </div>
-        </Container>
-      </Section>
-      <Solutions />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
+
+      <div className="pt-20 md:pt-24">
+        <Solutions />
+      </div>
     </>
   )
 }
