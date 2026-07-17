@@ -649,26 +649,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "BARRIER",
-        "name": "BARRIER",
-        "description": "BARRIER - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/barrier.jpg",
-        "imageAlt": "BARRIER - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "DL-COILHOSE",
         "name": "DL-COILHOSE",
         "description": "Manguera helicoidal azul y roja para frenos de aire. Doble refuerzo.",
@@ -1389,26 +1369,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-3456B",
-        "name": "KL-3456B",
-        "description": "KL-3456B - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-3456b.jpg",
-        "imageAlt": "KL-3456B - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-40F",
         "name": "KL-40F",
         "description": "KL-40F - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -1569,26 +1529,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-4-465F",
-        "name": "KL-4-465F",
-        "description": "KL-4-465F - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-4-465f.jpg",
-        "imageAlt": "KL-4-465F - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-4-466F",
         "name": "KL-4-466F",
         "description": "KL-4-466F - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -1709,26 +1649,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-4-474FBK",
-        "name": "KL-4-474FBK",
-        "description": "KL-4-474FBK - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-4-474fbk.jpg",
-        "imageAlt": "KL-4-474FBK - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-44F",
         "name": "KL-44F",
         "description": "KL-44F - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -1834,26 +1754,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         "description": "KL-464F - Conexiones hidráulicas. Para aplicaciones industriales.",
         "image": "/catalog/products/kl-464f.jpg",
         "imageAlt": "KL-464F - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-465F",
-        "name": "KL-465F",
-        "description": "KL-465F - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-465f.jpg",
-        "imageAlt": "KL-465F - producto industrial SCENA",
         "width": 600,
         "height": 600,
         "materials": "Material según configuración y ficha de aplicación.",
@@ -2154,26 +2054,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         "description": "KL-62F - Conexiones hidráulicas. Para aplicaciones industriales.",
         "image": "/catalog/products/kl-62f.jpg",
         "imageAlt": "KL-62F - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-64F",
-        "name": "KL-64F",
-        "description": "KL-64F - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-64f.jpg",
-        "imageAlt": "KL-64F - producto industrial SCENA",
         "width": 600,
         "height": 600,
         "materials": "Material según configuración y ficha de aplicación.",
@@ -2814,46 +2694,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         "description": "MIPVC - Conexiones hidráulicas. Para aplicaciones industriales.",
         "image": "/catalog/products/mipvc.png",
         "imageAlt": "MIPVC - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "ORFX",
-        "name": "ORFX",
-        "description": "ORFX - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/orfx.jpg",
-        "imageAlt": "ORFX - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "PLIOVIC",
-        "name": "PLIOVIC",
-        "description": "PLIOVIC - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/pliovic.jpg",
-        "imageAlt": "PLIOVIC - producto industrial SCENA",
         "width": 600,
         "height": 600,
         "materials": "Material según configuración y ficha de aplicación.",
@@ -3829,26 +3669,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "301-L",
-        "name": "301-L",
-        "description": "301-L - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/301-l.jpg",
-        "imageAlt": "301-L - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-394C",
         "name": "KL-394C",
         "description": "KL-394C - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -4289,26 +4109,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-FA-P09",
-        "name": "KL-FA-P09",
-        "description": "KL-FA-P09 - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-fa-p09.jpg",
-        "imageAlt": "KL-FA-P09 - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "ABG",
         "name": "ABG",
         "description": "ABG - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -4409,46 +4209,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-41WB",
-        "name": "KL-41WB",
-        "description": "KL-41WB - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-41wb.jpg",
-        "imageAlt": "KL-41WB - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-42E",
-        "name": "KL-42E",
-        "description": "KL-42E - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-42e.jpg",
-        "imageAlt": "KL-42E - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-41WL",
         "name": "KL-41WL",
         "description": "KL-41WL - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -4489,46 +4249,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-44W",
-        "name": "KL-44W",
-        "description": "KL-44W - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-44w.jpg",
-        "imageAlt": "KL-44W - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-46W",
-        "name": "KL-46W",
-        "description": "KL-46W - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-46w.jpg",
-        "imageAlt": "KL-46W - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-48W",
         "name": "KL-48W",
         "description": "KL-48W - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -4554,86 +4274,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         "description": "KL-49W - Conexiones hidráulicas. Para aplicaciones industriales.",
         "image": "/catalog/products/kl-49w.png",
         "imageAlt": "KL-49W - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-FA-P09",
-        "name": "KL-FA-P09",
-        "description": "KL-FA-P09 - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-fa-p09.jpg",
-        "imageAlt": "KL-FA-P09 - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KLQ-71S-DOT",
-        "name": "KLQ-71S-DOT",
-        "description": "KLQ-71S-DOT - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/klq-71s-dot.jpg",
-        "imageAlt": "KLQ-71S-DOT - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-REUS602",
-        "name": "KL-REUS602",
-        "description": "KL-REUS602 - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-reus602.jpg",
-        "imageAlt": "KL-REUS602 - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "KL-SHORT-129B",
-        "name": "KL-SHORT-129B",
-        "description": "KL-SHORT-129B - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-short-129b.jpg",
-        "imageAlt": "KL-SHORT-129B - producto industrial SCENA",
         "width": 600,
         "height": 600,
         "materials": "Material según configuración y ficha de aplicación.",
@@ -4820,26 +4460,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         ]
       },
       {
-        "code": "KL-466F",
-        "name": "KL-466F",
-        "description": "KL-466F - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-466f.jpg",
-        "imageAlt": "KL-466F - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
         "code": "KL-474F",
         "name": "KL-474F",
         "description": "KL-474F - Conexiones hidráulicas. Para aplicaciones industriales.",
@@ -4865,26 +4485,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         "description": "KL-AB-82 - Conexiones hidráulicas. Para aplicaciones industriales.",
         "image": "/catalog/products/kl-ab-82.jpg",
         "imageAlt": "KL-AB-82 - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      },
-      {
-        "code": "MANGABK2",
-        "name": "MANGABK2",
-        "description": "MANGABK2 - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/mangabk2.jpg",
-        "imageAlt": "MANGABK2 - producto industrial SCENA",
         "width": 600,
         "height": 600,
         "materials": "Material según configuración y ficha de aplicación.",
@@ -5005,37 +4605,6 @@ export const EXTENDED_CATALOG_CATEGORIES = [
         "description": "KL-FA-P02 - Conexiones hidráulicas. Para aplicaciones industriales.",
         "image": "/catalog/products/kl-fa-p02.jpg",
         "imageAlt": "KL-FA-P02 - producto industrial SCENA",
-        "width": 600,
-        "height": 600,
-        "materials": "Material según configuración y ficha de aplicación.",
-        "pressure": "Validación según serie, diámetro y aplicación.",
-        "temperature": "Validación según material y aplicación.",
-        "applications": [
-          "Mantenimiento industrial",
-          "Operación de planta",
-          "Aplicación validada por SCENA"
-        ],
-        "specifications": [
-          "Consultar medidas y conexiones disponibles con SCENA."
-        ]
-      }
-    ]
-  },
-  {
-    "id": "frenos-aire",
-    "label": "Frenos de aire",
-    "summary": "Frenos de aire seleccionados por aplicación.",
-    "image": "/catalog/products/kl-272p.jpg",
-    "imageAlt": "Frenos de aire SCENA",
-    "width": 600,
-    "height": 600,
-    "products": [
-      {
-        "code": "KL-272P",
-        "name": "KL-272P",
-        "description": "KL-272P - Conexiones hidráulicas. Para aplicaciones industriales.",
-        "image": "/catalog/products/kl-272p.jpg",
-        "imageAlt": "KL-272P - producto industrial SCENA",
         "width": 600,
         "height": 600,
         "materials": "Material según configuración y ficha de aplicación.",
