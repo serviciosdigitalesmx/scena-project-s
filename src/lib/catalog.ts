@@ -149,7 +149,7 @@ export const CATALOG_CATEGORIES: CatalogCategory[] = [
         pressure: 'Servicio de 250 a 400 PSI; prueba según modelo',
         temperature: '-20 °C a 80 °C',
         applications: ['Gabinetes contra incendio', 'Brigadas industriales', 'Bomberos', 'Sistemas de respaldo'],
-        specifications: ['Diámetros de 1 1/2 a 3 pulgadas', 'Coverflex, algodón o doble jacket', 'Conexiones NST, NH o NPSH'],
+        specifications: ['Diámetros de 1 1/2 a 3 pulgadas', 'Construcción sencilla, algodón o doble chaqueta', 'Conexiones NST, NH o NPSH'],
       },
     ],
   },
