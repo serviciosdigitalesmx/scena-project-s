@@ -54,7 +54,7 @@ export function Solutions() {
   const quoteUrl = (subject: string) => `https://wa.me/${SITE.whatsapp.number}?text=${encodeURIComponent(`Hola SCENA, quiero cotizar ${subject}.`)}`
 
   return (
-    <Section id="soluciones" className="bg-navy">
+    <Section id="soluciones" className="bg-[#f4f7fb]">
       <Container>
         <div className="border border-navy/10 bg-white">
           <div className="grid border-b border-navy/10 lg:grid-cols-[1fr_340px]">
