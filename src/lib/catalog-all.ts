@@ -4,9 +4,34 @@ import {
   FAQS,
 } from '@/lib/catalog'
 import {
-  EXTENDED_CATALOG_CATEGORIES,
-  EXTENDED_CATALOG_PRODUCTS,
+  EXTENDED_CATALOG_CATEGORIES as RAW_EXTENDED_CATALOG_CATEGORIES,
+  EXTENDED_CATALOG_PRODUCTS as RAW_EXTENDED_CATALOG_PRODUCTS,
 } from '@/lib/extended-catalog-generated'
+import {
+  sanitizeProductDescription,
+  sanitizeProductName,
+} from '@/lib/catalog-sanitizer'
+
+const EXTENDED_CATALOG_CATEGORIES = RAW_EXTENDED_CATALOG_CATEGORIES.map((category) => ({
+  ...category,
+  products: category.products.map((product) => ({
+    ...product,
+    name: sanitizeProductName(product.name),
+    description: sanitizeProductDescription(product.description, product.name, category.label),
+  })),
+}))
+
+const EXTENDED_CATALOG_PRODUCTS = RAW_EXTENDED_CATALOG_PRODUCTS.map((product) => {
+  // We need to find the category for this product to pass the category label
+  const category = EXTENDED_CATALOG_CATEGORIES.find((cat) =>
+    cat.products.some((p) => p.code === product.code)
+  )
+  return {
+    ...product,
+    name: sanitizeProductName(product.name),
+    description: sanitizeProductDescription(product.description, product.name, category?.label ?? 'Producto Industrial'),
+  }
+})
 
 const imageByCategory: Record<string, string> = {
   industrial: '/catalog/manguera-industrial.webp',
