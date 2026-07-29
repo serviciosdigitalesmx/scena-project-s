@@ -26,6 +26,44 @@
 }
 
 @layer components {
+  .industrial-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 38px 38px;
+    mask-image: linear-gradient(to bottom, black, transparent 82%);
+  }
+
+  .section-surface-light {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background-color: #ffffff;
+  }
+
+  .section-surface-light::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    content: '';
+    pointer-events: none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Cpath d='M13 8v10M8 13h10' fill='none' stroke='%231457E6' stroke-opacity='.34' stroke-width='1.25' stroke-linecap='square'/%3E%3C/svg%3E"),
+      radial-gradient(circle at 78% 18%, rgba(20, 87, 230, 0.15), transparent 29%),
+      radial-gradient(circle at 12% 84%, rgba(227, 38, 54, 0.09), transparent 23%);
+    background-size: 26px 26px, auto, auto;
+    background-position: 0 0, center, center;
+    opacity: 0.76;
+  }
+
+  .section-kicker {
+    @apply font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-accent-blue;
+  }
+
+  .reveal-up {
+    animation: reveal-up 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
   .btn-primary {
     @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold text-white transition-all duration-200;
     background-color: var(--scena-red);
@@ -59,5 +97,22 @@
   }
   .animate-slow-zoom {
     animation: slow-zoom 25s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up {
+    animation: none;
   }
 }

@@ -9,7 +9,7 @@ interface SectionProps {
 
 export function Section({ id, className, children, dark = false }: SectionProps) {
   return (
-    <section id={id} className={cn('py-20 md:py-28', dark ? 'bg-navy text-white' : 'bg-gray-technical text-navy-light', className)}>
+    <section id={id} className={cn('py-20 md:py-28', dark ? 'bg-navy text-white' : 'section-surface-light text-navy-light', className)}>
       {children}
     </section>
   )

@@ -6,7 +6,7 @@ import { PROCESS_STEPS } from '@/lib/constants'
 
 export function Process() {
   return (
-    <Section id="proceso" className="bg-gray-technical">
+    <Section id="proceso">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
@@ -16,10 +16,10 @@ export function Process() {
           </div>
           <div className="lg:col-span-8 space-y-8">
             {PROCESS_STEPS.map((step, index) => (
-              <div key={step.step} className="flex items-start gap-6 p-6 rounded-lg bg-white border border-gray-200 hover:border-accent-blue/20 transition-all duration-300">
+              <div key={step.step} className="flex items-start gap-6 border border-accent-blue/15 bg-white/90 p-6 shadow-[0_16px_40px_rgba(6,27,79,0.06)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-accent-blue/40 hover:shadow-[0_22px_48px_rgba(6,27,79,0.11)]">
                 <div className="shrink-0">
                   <div className="w-12 h-12 rounded-full bg-navy flex items-center justify-center"><span className="font-mono text-lg font-bold text-white">{step.step}</span></div>
-                  {index < PROCESS_STEPS.length - 1 ? <div className="w-px h-8 mx-auto bg-gray-200 mt-2" /> : null}
+                  {index < PROCESS_STEPS.length - 1 ? <div className="mt-2 h-8 w-px mx-auto bg-accent-blue/20" /> : null}
                 </div>
                 <div>
                   <h3 className="font-mono text-lg font-semibold text-navy-light">{step.title}</h3>

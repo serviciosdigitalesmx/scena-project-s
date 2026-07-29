@@ -7,7 +7,7 @@ import { ContactActions } from '@/components/ui/ContactActions'
 
 export function FAQ() {
   return (
-    <Section id="faq" className="bg-gray-technical">
+    <Section id="faq">
       <Container>
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -15,7 +15,7 @@ export function FAQ() {
             <Heading level={2} className="mt-4 text-navy">Lo que necesitamos para cotizar bien</Heading>
             <p className="mt-5 text-gray-600">Si no tienes todos los datos, te ayudamos a identificarlos sin asumir especificaciones críticas.</p>
           </div>
-          <div className="divide-y divide-navy/10 border-y border-navy/10 lg:col-span-8">
+          <div className="divide-y divide-navy/10 border border-accent-blue/15 bg-white/85 px-6 shadow-[0_20px_50px_rgba(6,27,79,0.07)] backdrop-blur-sm lg:col-span-8 lg:px-8">
             {FAQS.map((item) => (
               <details key={item.question} className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-left text-lg font-semibold text-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-blue">
